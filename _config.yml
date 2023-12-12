@@ -271,8 +271,8 @@ display_categories: ['blockquotes'] # these categories will be displayed on the 
 
 scholar:
 
-  last_name: [Lee, 이]
-  first_name: [Eunju, E., 은주]
+  last_name: [Lee]
+  first_name: [Eunju, E.]
 
   style: apa
   locale: en
