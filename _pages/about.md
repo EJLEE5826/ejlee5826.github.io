@@ -20,10 +20,12 @@ social: true
 announcements:
   enabled: true
   scrollable: false
-  limit: 6
+  limit: 10
 
 latest_posts:
   enabled: false
+images:
+  lightbox2: true
 ---
 
 I am a Ph.D. student in Image Engineering at Chung-Ang University, advised by Prof. YoungBin Kim in the Intelligent Information Processing Lab (IIPL). I received my M.S. in Image Engineering from the same lab in 2022 and my B.S. from Chung-Ang University in 2020.

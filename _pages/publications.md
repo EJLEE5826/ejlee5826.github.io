@@ -5,6 +5,8 @@ title: Publications
 description: International publications in reverse chronological order. See the CV for domestic papers.
 nav: true
 nav_order: 1
+images:
+  lightbox2: true
 ---
 
 <div class="publications">

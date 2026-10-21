@@ -30,3 +30,11 @@
   url: https://www.techart.or.kr/
 "arXiv":
   url: https://arxiv.org/
+"EMNLP":
+  url: https://aclanthology.org/
+"CIKM":
+  url: https://www.cikm.org/
+"NeurIPS-W":
+  url: https://neurips.cc/
+"AAAI-W":
+  url: https://aaai.org/conference/aaai/

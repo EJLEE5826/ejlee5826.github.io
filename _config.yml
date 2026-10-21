@@ -226,6 +226,7 @@ exclude:
   - gems/
   - migrations/
   - vendor
+  - tmp/
 keep_files:
   - CNAME
   - .nojekyll
@@ -375,6 +376,7 @@ filtered_bibtex_keywords:
     bibtex_show,
     blog,
     code,
+    dataset,
     dimensions,
     eprint,
     google_scholar_id,
@@ -384,6 +386,7 @@ filtered_bibtex_keywords:
     pdf,
     pmid,
     poster,
+    presentation,
     preview,
     selected,
     slides,

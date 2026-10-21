@@ -642,52 +642,82 @@ blockquote {
 }
 
 // ---------------------------------------------------------------------------
-// Publications: thumbnail column (180px, original aspect ratio) + annotation
+// Publications: text left, square thumbnail right (click = full image), annotation
 // ---------------------------------------------------------------------------
 
 .publications ol.bibliography li {
   .row {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    margin: 0;
 
-    > [class*="col-"] {
+    > .pub-body,
+    > .preview-col {
       width: auto;
       max-width: none;
       flex: none;
       padding: 0;
+      min-width: 0;
     }
   }
 
-  // Left column: venue badge above the optional preview image
-  .abbr {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.6rem;
-    margin-bottom: 0.9rem;
+  .pub-body .abbr {
+    margin-bottom: 0.5rem;
 
     abbr.badge {
       margin: 0;
     }
+  }
 
-    .preview,
-    picture,
-    figure {
+  // Venue badge (outlined) + presentation badge (filled, stands out)
+  .pub-body .abbr {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .badge-presentation {
+    display: inline-block;
+    background: $ink;
+    color: #fff !important;
+    border: 1px solid $ink;
+    border-radius: 999px;
+    padding: 0.2rem 0.6rem;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    line-height: 1.5;
+  }
+
+  // Fixed 3:2 landscape box; the figure fills it (cropped), click shows the full figure
+  .preview-col {
+    a {
       display: block;
       width: 100%;
       max-width: 320px;
-      margin: 0;
-    }
-
-    img.preview,
-    picture img,
-    figure img {
-      display: block;
-      width: 100%;
-      height: auto;
-      border-radius: 0 !important;
-      box-shadow: none !important;
+      aspect-ratio: 3 / 2;
+      overflow: hidden;
       border: 1px solid rgba(0, 0, 0, 0.08);
       background: #fff;
+      text-decoration: none;
+      transition: filter 0.15s ease;
+
+      &:hover {
+        filter: brightness(0.96);
+      }
+    }
+
+    img.preview {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 0 !important;
+      box-shadow: none !important;
     }
   }
 
@@ -701,18 +731,46 @@ blockquote {
 @media (min-width: 576px) {
   .publications ol.bibliography li .row {
     display: grid;
-    grid-template-columns: 180px minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr) 180px;
     column-gap: 1.5rem;
     align-items: start;
   }
 
-  .publications ol.bibliography li .abbr {
-    margin-bottom: 0;
+  .publications ol.bibliography li .preview-col a {
+    max-width: 180px;
+  }
+}
 
-    .preview,
-    picture,
-    figure {
-      max-width: 180px;
-    }
+// Lightbox (al_img_tools lightbox2 adapter) in the site's light palette.
+// The adapter stylesheet loads after main.css, so these selectors are scoped
+// under `body` to win on specificity.
+body .al-lightbox-overlay {
+  background: rgba(255, 255, 255, 0.97);
+}
+
+body .al-lightbox-image {
+  box-shadow: none;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: #fff;
+}
+
+body .al-lightbox-caption {
+  color: $ink;
+  font-family: $font-stack;
+  font-size: 0.85rem;
+}
+
+body .al-lightbox-close,
+body .al-lightbox-nav {
+  color: $ink;
+  background: transparent;
+  border: 0;
+
+  &:hover {
+    color: $muted;
+  }
+
+  &:disabled {
+    opacity: 0.2;
   }
 }
