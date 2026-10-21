@@ -1,0 +1,11 @@
+# Social links shown on the about page (and in the footer/navbar if enabled).
+# Icons are rendered by the jekyll-socials plugin in the order defined here:
+# https://github.com/george-gca/jekyll-socials
+email: dmswn5829@cau.ac.kr
+scholar_userid: iUJ0tKwAAAAJ
+semanticscholar_id: 2149216191
+orcid_id: 0000-0002-6571-0156
+dblp_url: https://dblp.org/pid/61/4108-3
+github_username: EJLEE5826
+linkedin_username: eunju-lee-85a1a0199
+# rss_icon: true # uncomment to show the RSS icon

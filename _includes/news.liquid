@@ -1,0 +1,41 @@
+{% comment %}
+  Site override of al_folio_core's news.liquid.
+  Only announcements dated in the current year (at build time) are shown, so
+  last year's items disappear automatically each January without any edits.
+  The section is omitted entirely when there is nothing from this year.
+{% endcomment %}
+{% assign current_year = 'now' | date: '%Y' %}
+{% assign this_year_news = '' | split: '' %}
+{% for item in site.news %}
+  {% assign item_year = item.date | date: '%Y' %}
+  {% if item_year == current_year %}
+    {% assign this_year_news = this_year_news | push: item %}
+  {% endif %}
+{% endfor %}
+{% assign news_size = this_year_news | size %}
+{% if news_size > 0 %}
+  <div class="news">
+    <div class="table-responsive">
+      <table class="table table-sm table-borderless">
+        {% assign news = this_year_news | sort: 'date' | reverse %}
+        {% if include.limit and page.announcements.limit %}
+          {% assign news_limit = page.announcements.limit %}
+        {% else %}
+          {% assign news_limit = news_size %}
+        {% endif %}
+        {% for item in news limit: news_limit %}
+          <tr>
+            <th scope="row" style="width: 20%">{{ item.date | date: '%b %d, %Y' }}</th>
+            <td>
+              {% if item.inline %}
+                {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
+              {% else %}
+                <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+              {% endif %}
+            </td>
+          </tr>
+        {% endfor %}
+      </table>
+    </div>
+  </div>
+{% endif %}

@@ -1,28 +1,280 @@
 ---
 ---
 
-@string{aps = {American Physical Society,}}
+% Publications of Eunju Lee.
+% Entries are rendered by jekyll-scholar, newest year first.
+% Custom keys: abbr (venue badge), selected (shown on the home page),
+% html (official page), arxiv (arXiv id), code (repository), bibtex_show.
 
-@ARTICLE{10345539,
-  author={Kim, JiHyun and Kwon, JuneHyoung and Kim, Mihyeon and Lee, Eunju and Kim, YoungBin},
-  journal={IEEE Access}, 
-  title={Enhancing Noisy Label Facial Expression Recognition with Split and Merge Consistency Regularization}, 
-  year={2023},
-  volume={},
-  number={},
-  pages={1-1},
-  doi={10.1109/ACCESS.2023.3339763}}
+% ---------------------------------------------------------------------------
+% 2026
+% ---------------------------------------------------------------------------
 
-@article{JIN2021115738,
-  title = {TrafficBERT: Pre-trained model with large-scale data for long-range traffic flow forecasting},
-  journal = {Expert Systems with Applications},
-  volume = {186},
-  pages = {115738},
-  year = {2021},
-  issn = {0957-4174},
-  doi = {https://doi.org/10.1016/j.eswa.2021.115738},
-  url = {https://www.sciencedirect.com/science/article/pii/S0957417421011179},
-  author = {KyoHoon, Jin and JeongA, Wi and Eunju, Lee and ShinJin, Kang and SooKyun, Kim and YoungBin, Kim},
-  keywords = {Traffic flow, Big data, Pre-trained model, BERT},
-  abstract = {Traffic flow prediction has various applications such as in traffic systems and autonomous driving. Road conditions have become increasingly complex, and this, in turn, has increased the demand for effective traffic volume predictions. Statistical models and conventional machine-learning models have been employed for this purpose more recently, deep learning has been widely used. However, most deep learning-based models require data additional to traffic information, such as information on adjacent roads or road weather conditions. Therefore, the effectiveness of these models is typically restricted to certain roads. Even if such information were available, there is a possibility of bias toward a specific road. To overcome this limitation, based on the bidirectional encoder representations from transformers (BERT), we propose trafficBERT, a model that is suitable for use on various roads because it is pre-trained with large-scale traffic data. Our model captures time-series information by employing multi-head self-attention in place of the commonly used recurrent neural network. In addition, the autocorrelation between the states before and after each time step is determined more efficiently via factorized embedding parameterization. Our results indicate that trafficBERT outperforms models trained using data for specific roads, as well as commonly used statistical and deep learning models, such as Stacked Autoencoder, and models based on long short-term memory, in terms of accuracy.}
+@inproceedings{lee2026hycal,
+  abbr        = {CVPR},
+  bibtex_show = {true},
+  selected    = {true},
+  title       = {HyCal: A Training-Free Prototype Calibration Method for Cross-Discipline Few-Shot Class-Incremental Learning},
+  author      = {Lee*, Eunju and Kim*, MiHyeon and Kwon, JuneHyoung and Lee, Yoonji and Kim, JiHyun and Jang, Soojin and Kim, YoungBin},
+  booktitle   = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year        = {2026},
+  html        = {https://openaccess.thecvf.com/content/CVPR2026/html/Lee_HyCal_A_Training-Free_Prototype_Calibration_Method_for_Cross-Discipline_Few-Shot_Class-Incremental_CVPR_2026_paper.html},
+  arxiv       = {2604.15678},
+  code        = {https://github.com/EJLEE5826/HyCal-CIL},
+  annotation  = {* Equal contribution}
+}
+
+@inproceedings{kwon2026easy,
+  abbr        = {AAAI},
+  bibtex_show = {true},
+  title       = {Easy to Learn, Yet Hard to Forget: Towards Robust Unlearning Under Bias},
+  author      = {Kwon, JuneHyoung and Kim, MiHyeon and Lee, Eunju and Lee, Yoonji and Lee, Seunghoon and Kim, YoungBin},
+  booktitle   = {Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume      = {40},
+  number      = {7},
+  pages       = {5782--5790},
+  year        = {2026},
+  doi         = {10.1609/aaai.v40i7.37499},
+  html        = {https://doi.org/10.1609/aaai.v40i7.37499},
+  arxiv       = {2602.21773}
+}
+
+@inproceedings{kwon2026forgetting,
+  abbr        = {ACL},
+  bibtex_show = {true},
+  title       = {Before Forgetting, Learn to Remember: Revisiting Foundational Learning Failures in LVLM Unlearning Benchmarks},
+  author      = {Kwon, JuneHyoung and Kim, MiHyeon and Lee, Eunju and Yun, JungMin and Lim, Byeonggeuk and Kim, YoungBin},
+  booktitle   = {Findings of the Association for Computational Linguistics: ACL 2026},
+  pages       = {34063--34079},
+  year        = {2026},
+  month       = jul,
+  address     = {San Diego, California, USA},
+  publisher   = {Association for Computational Linguistics},
+  doi         = {10.18653/v1/2026.findings-acl.1701},
+  html        = {https://aclanthology.org/2026.findings-acl.1701/}
+}
+
+@inproceedings{lee2026conan,
+  abbr        = {PAKDD},
+  bibtex_show = {true},
+  title       = {CONAN: CONcept-Oriented ANomaly Detector for Interpretable Zero-Shot Detection},
+  author      = {Lee, Yoonji and Lee, Eunju and Kwon, JuneHyoung and Lee, Seunghoo and Kim, Kahyun and Yu, Seunguk and Kim, YoungBin},
+  booktitle   = {Advances in Knowledge Discovery and Data Mining (PAKDD 2026)},
+  series      = {Lecture Notes in Computer Science},
+  pages       = {549--560},
+  year        = {2026},
+  publisher   = {Springer},
+  doi         = {10.1007/978-981-92-1947-6_44},
+  html        = {https://doi.org/10.1007/978-981-92-1947-6_44}
+}
+
+@article{lee2026epistemic,
+  abbr        = {EAAI},
+  bibtex_show = {true},
+  title       = {Epistemic and aleatory uncertainty guided transparency masking for medical image segmentation},
+  author      = {Lee, Yoonji and Lee, Eunju and Kwon, JuneHyoung and Lee, Seunghoon and Kim, YoungBin},
+  journal     = {Engineering Applications of Artificial Intelligence},
+  volume      = {182},
+  pages       = {115826},
+  year        = {2026},
+  doi         = {10.1016/j.engappai.2026.115826},
+  html        = {https://doi.org/10.1016/j.engappai.2026.115826}
+}
+
+% ---------------------------------------------------------------------------
+% 2025
+% ---------------------------------------------------------------------------
+
+@inproceedings{kwon2025seesaw,
+  abbr        = {NAACL},
+  bibtex_show = {true},
+  selected    = {true},
+  title       = {See-Saw Modality Balance: See Gradient, and Sew Impaired Vision-Language Balance to Mitigate Dominant Modality Bias},
+  author      = {Kwon, JuneHyoung and Kim, MiHyeon and Lee, Eunju and Choi, Juhwan and Kim, YoungBin},
+  booktitle   = {Proceedings of the 2025 Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 1: Long Papers)},
+  pages       = {4364--4378},
+  year        = {2025},
+  month       = apr,
+  address     = {Albuquerque, New Mexico},
+  publisher   = {Association for Computational Linguistics},
+  doi         = {10.18653/v1/2025.naacl-long.222},
+  html        = {https://aclanthology.org/2025.naacl-long.222/},
+  arxiv       = {2503.13834}
+}
+
+@inproceedings{lee2025xtagclip,
+  abbr        = {MICCAI-W},
+  bibtex_show = {true},
+  selected    = {true},
+  title       = {XTag-CLIP: Robust and Reliable Thyroid Scar Analysis with Limited Data via Cross-Attention},
+  author      = {Lee, Eunju and Lee, SeungHoon and Kim, YoungBin and Ahn, Jong-hyuk},
+  booktitle   = {Applications of Medical Artificial Intelligence (AMAI 2025, MICCAI Workshop)},
+  series      = {Lecture Notes in Computer Science},
+  pages       = {142--151},
+  year        = {2025},
+  publisher   = {Springer},
+  doi         = {10.1007/978-3-032-09569-5_15},
+  html        = {https://doi.org/10.1007/978-3-032-09569-5_15}
+}
+
+@article{kim2025rankotom,
+  abbr        = {arXiv},
+  bibtex_show = {true},
+  title       = {Rank-O-ToM: Unlocking Emotional Nuance Ranking to Enhance Affective Theory-of-Mind},
+  author      = {Kim, JiHyun and Kwon, JuneHyoung and Kim, MiHyeon and Lee, Eunju and Kim, YoungBin},
+  journal     = {arXiv preprint arXiv:2503.16461},
+  year        = {2025},
+  arxiv       = {2503.16461}
+}
+
+@article{kim2025diffusion,
+  abbr        = {TechArt},
+  bibtex_show = {true},
+  title       = {Diffusion Model for Motion Deblurring with Directional Separated Decoders},
+  author      = {Kim, MiHyeon and Lee, Eunju and Lee, Seunghoon and Kim, YoungBin},
+  journal     = {TECHART: Journal of Arts and Imaging Science},
+  volume      = {12},
+  number      = {2},
+  pages       = {6--10},
+  year        = {2025},
+  doi         = {10.15323/techart.2022.5.12.2.6}
+}
+
+% ---------------------------------------------------------------------------
+% 2024
+% ---------------------------------------------------------------------------
+
+@inproceedings{jang2024dial,
+  abbr        = {ECCV},
+  bibtex_show = {true},
+  selected    = {true},
+  title       = {DIAL: Dense Image-text ALignment for Weakly Supervised Semantic Segmentation},
+  author      = {Jang, Soojin and Yun, Jungmin and Kwon, JuneHyoung and Lee, Eunju and Kim, YoungBin},
+  booktitle   = {Computer Vision -- ECCV 2024},
+  series      = {Lecture Notes in Computer Science},
+  pages       = {248--266},
+  year        = {2024},
+  publisher   = {Springer},
+  doi         = {10.1007/978-3-031-72890-7_15},
+  html        = {https://doi.org/10.1007/978-3-031-72890-7_15},
+  arxiv       = {2409.15801}
+}
+
+@inproceedings{kwon2024detour,
+  abbr        = {WACV},
+  bibtex_show = {true},
+  selected    = {true},
+  title       = {Learning to Detour: Shortcut Mitigating Augmentation for Weakly Supervised Semantic Segmentation},
+  author      = {Kwon, JuneHyoung and Lee, Eunju and Cho, Yunsung and Kim, YoungBin},
+  booktitle   = {Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
+  pages       = {808--817},
+  year        = {2024},
+  doi         = {10.1109/WACV57701.2024.00087},
+  html        = {https://doi.org/10.1109/WACV57701.2024.00087},
+  arxiv       = {2405.18148}
+}
+
+@inproceedings{choi2024gpts,
+  abbr        = {EACL},
+  bibtex_show = {true},
+  title       = {GPTs Are Multilingual Annotators for Sequence Generation Tasks},
+  author      = {Choi, Juhwan and Lee, Eunju and Jin, Kyohoon and Kim, YoungBin},
+  booktitle   = {Findings of the Association for Computational Linguistics: EACL 2024},
+  pages       = {17--40},
+  year        = {2024},
+  month       = mar,
+  address     = {St. Julian's, Malta},
+  publisher   = {Association for Computational Linguistics},
+  doi         = {10.18653/v1/2024.findings-eacl.2},
+  html        = {https://aclanthology.org/2024.findings-eacl.2/},
+  arxiv       = {2402.05512}
+}
+
+@article{yang2024weakly,
+  abbr        = {IEEE Access},
+  bibtex_show = {true},
+  title       = {A Weakly Supervised Learning Framework Utilizing Enhanced Class Activation Map for Object Detection in Construction Sites},
+  author      = {Yang, Jaehun and Lee, Eunju and Kwon, JuneHyoung and Lee, Dongmin and Kim, YoungBin and Park, Chansik and Lee, Doyeop},
+  journal     = {IEEE Access},
+  volume      = {12},
+  pages       = {99989--100004},
+  year        = {2024},
+  doi         = {10.1109/ACCESS.2024.3423697},
+  html        = {https://doi.org/10.1109/ACCESS.2024.3423697}
+}
+
+@inproceedings{lee2024beyond,
+  abbr        = {ICTC},
+  bibtex_show = {true},
+  title       = {Beyond the Lines: Grayscale-Driven Dual-Guided GANs for Enhanced Sketch Image Colorization},
+  author      = {Lee, SeungHoo and Kwon, JuneHyoung and Choi, Jooweon and Kim, MiHyeon and Lee, Eunju and Kim, YoungBin},
+  booktitle   = {2024 15th International Conference on Information and Communication Technology Convergence (ICTC)},
+  pages       = {1012--1016},
+  year        = {2024},
+  doi         = {10.1109/ICTC62082.2024.10827481},
+  html        = {https://doi.org/10.1109/ICTC62082.2024.10827481}
+}
+
+% ---------------------------------------------------------------------------
+% 2023
+% ---------------------------------------------------------------------------
+
+@article{kim2023enhancing,
+  abbr        = {IEEE Access},
+  bibtex_show = {true},
+  title       = {Enhancing Noisy Label Facial Expression Recognition With Split and Merge Consistency Regularization},
+  author      = {Kim, JiHyun and Kwon, JuneHyoung and Kim, MiHyeon and Lee, Eunju and Kim, YoungBin},
+  journal     = {IEEE Access},
+  volume      = {11},
+  pages       = {140496--140505},
+  year        = {2023},
+  doi         = {10.1109/ACCESS.2023.3339763},
+  html        = {https://doi.org/10.1109/ACCESS.2023.3339763}
+}
+
+% ---------------------------------------------------------------------------
+% 2022
+% ---------------------------------------------------------------------------
+
+@article{shin2022rdiou,
+  abbr        = {TechArt},
+  bibtex_show = {true},
+  title       = {Repulsion Distance Intersection over Union Loss for Crowd Scene Detection},
+  author      = {Shin, Yuchul and Lee, Eunju and Jang, Soojin and Kim, YoungBin and Kwon, JuneHyoung},
+  journal     = {TECHART: Journal of Arts and Imaging Science},
+  volume      = {9},
+  number      = {1},
+  pages       = {27--30},
+  year        = {2022},
+  doi         = {10.15323/techart.2022.2.9.1.27}
+}
+
+@article{yoon2022frame,
+  abbr        = {TechArt},
+  bibtex_show = {true},
+  title       = {Deep Learning Based Frame Interpolation for Stop-motion Animation},
+  author      = {Yoon, Ji-Ill and Jang, Soojin and Lee, Eunju and Byun, Se-Eun and Jin, So-Jin and Kim, Takhoon},
+  journal     = {TECHART: Journal of Arts and Imaging Science},
+  volume      = {9},
+  number      = {3},
+  pages       = {36--40},
+  year        = {2022},
+  doi         = {10.15323/techart.2022.10.9.3.36}
+}
+
+% ---------------------------------------------------------------------------
+% 2021
+% ---------------------------------------------------------------------------
+
+@article{jin2021trafficbert,
+  abbr        = {ESWA},
+  bibtex_show = {true},
+  title       = {TrafficBERT: Pre-trained model with large-scale data for long-range traffic flow forecasting},
+  author      = {Jin, Kyohoon and Wi, JeongA and Lee, Eunju and Kang, Shinjin and Kim, Sookyun and Kim, YoungBin},
+  journal     = {Expert Systems with Applications},
+  volume      = {186},
+  pages       = {115738},
+  year        = {2021},
+  doi         = {10.1016/j.eswa.2021.115738},
+  html        = {https://www.sciencedirect.com/science/article/pii/S0957417421011179}
 }

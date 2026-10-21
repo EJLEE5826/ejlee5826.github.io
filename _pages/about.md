@@ -2,25 +2,34 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: Ph.D. student · <a href="https://sites.google.com/view/iiplcau/home">Intelligent Information Processing Lab</a>, Chung-Ang University
 
+# Replace assets/img/prof_pic.jpg with your own photo (same file name) to update the portrait.
 profile:
   align: right
   image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
+  image_circular: false
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>Intelligent Information Processing Lab</p>
+    <p>Graduate School of Advanced Imaging Science, Multimedia &amp; Film</p>
+    <p>Chung-Ang University, Seoul, Korea</p>
 
-news: true  # includes a list of news items
-latest_posts: true  # includes a list of the newest posts
-selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true  # includes social icons at the bottom of the page
+selected_papers: true
+social: true
+
+announcements:
+  enabled: true
+  scrollable: false
+  limit: 6
+
+latest_posts:
+  enabled: false
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I am a Ph.D. student in Image Engineering at Chung-Ang University, advised by Prof. YoungBin Kim in the Intelligent Information Processing Lab (IIPL). I received my M.S. in Image Engineering from the same lab in 2022 and my B.S. from Chung-Ang University in 2020.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+My research is on making vision and vision-language models learn reliably when data is scarce, imbalanced, or shifting. I am particularly interested in **few-shot class-incremental and continual learning**, **vision-language models**, and **multimodal learning**, including how modalities should be balanced and how models can unlearn without breaking what they already know. Earlier work covered weakly supervised semantic segmentation and medical image analysis.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+Recent work includes HyCal (CVPR 2026, co-first author), a training-free prototype calibration method for cross-discipline few-shot class-incremental learning, and XTag-CLIP (AMAI @ MICCAI 2025), a cross-attention approach to thyroid scar analysis with limited data.
+
+I am happy to talk about research or collaboration. The quickest way to reach me is by email.

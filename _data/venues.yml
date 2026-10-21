@@ -1,6 +1,32 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
-  color: "#00369f"
-
-"PhysRev":
-  url: https://journals.aps.org/
+# Venue badges used by the `abbr` field in _bibliography/papers.bib.
+# Colors are intentionally omitted: badges are styled as plain outlined labels.
+"CVPR":
+  url: https://cvpr.thecvf.com/
+"ECCV":
+  url: https://eccv.ecva.net/
+"WACV":
+  url: https://wacv.thecvf.com/
+"AAAI":
+  url: https://aaai.org/conference/aaai/
+"ACL":
+  url: https://aclanthology.org/
+"NAACL":
+  url: https://aclanthology.org/
+"EACL":
+  url: https://aclanthology.org/
+"PAKDD":
+  url: https://pakdd.org/
+"MICCAI-W":
+  url: https://miccai.org/
+"ICTC":
+  url: https://ictc.org/
+"IEEE Access":
+  url: https://ieeeaccess.ieee.org/
+"EAAI":
+  url: https://www.sciencedirect.com/journal/engineering-applications-of-artificial-intelligence
+"ESWA":
+  url: https://www.sciencedirect.com/journal/expert-systems-with-applications
+"TechArt":
+  url: https://www.techart.or.kr/
+"arXiv":
+  url: https://arxiv.org/
