@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /publications/
-title: publications
+title: Publications
 description: International publications in reverse chronological order. See the CV for domestic papers.
 nav: true
 nav_order: 1

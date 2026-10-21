@@ -1,8 +1,8 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
-subtitle: Ph.D. student · <a href="https://sites.google.com/view/iiplcau/home">Intelligent Information Processing Lab</a>, Chung-Ang University
+subtitle: Ph.D. student · <a href="https://iiplcau.github.io/">Intelligent Information Processing Lab</a>, Chung-Ang University
 
 # Replace assets/img/prof_pic.jpg with your own photo (same file name) to update the portrait.
 profile:

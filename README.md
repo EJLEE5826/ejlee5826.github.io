@@ -15,6 +15,7 @@ Personal academic website of Eunju Lee, built with [al-folio](https://github.com
 | News (current year)   | `_news/*.md`                           |
 | Social icons          | `_data/socials.yml`                    |
 | Portrait              | `assets/img/prof_pic.jpg`              |
+| Paper thumbnails      | `assets/img/publication_preview/<bibkey>.png` (+ `preview` field in the bib entry) |
 | Visual style          | `_sass/_minimal.scss` (+ `_variables`, `_themes`) |
 
 The news section only shows items dated in the current year (`_includes/news.liquid`).

@@ -640,3 +640,79 @@ blockquote {
   padding: 0.25rem 0 0.25rem 1.25rem;
   background: transparent;
 }
+
+// ---------------------------------------------------------------------------
+// Publications: thumbnail column (180px, original aspect ratio) + annotation
+// ---------------------------------------------------------------------------
+
+.publications ol.bibliography li {
+  .row {
+    display: block;
+
+    > [class*="col-"] {
+      width: auto;
+      max-width: none;
+      flex: none;
+      padding: 0;
+    }
+  }
+
+  // Left column: venue badge above the optional preview image
+  .abbr {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+    margin-bottom: 0.9rem;
+
+    abbr.badge {
+      margin: 0;
+    }
+
+    .preview,
+    picture,
+    figure {
+      display: block;
+      width: 100%;
+      max-width: 320px;
+      margin: 0;
+    }
+
+    img.preview,
+    picture img,
+    figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 0 !important;
+      box-shadow: none !important;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      background: #fff;
+    }
+  }
+
+  .annotation {
+    font-size: 0.78rem;
+    color: $muted;
+    margin-top: 0.15rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .publications ol.bibliography li .row {
+    display: grid;
+    grid-template-columns: 180px minmax(0, 1fr);
+    column-gap: 1.5rem;
+    align-items: start;
+  }
+
+  .publications ol.bibliography li .abbr {
+    margin-bottom: 0;
+
+    .preview,
+    picture,
+    figure {
+      max-width: 180px;
+    }
+  }
+}
