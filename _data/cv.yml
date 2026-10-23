@@ -91,14 +91,6 @@ cv:
         releaseDate: 2024-01
         url: https://doi.org/10.1109/WACV57701.2024.00087
 
-    Domestic Publications:
-      - bullet: "수학 문장제 해결을 위한 PLM 기반 수리적 추론의 필요성에 대한 성능 비교 — 송상민, 진교훈, 조수진, 이은주, 김영빈, *한국정보과학회 학술발표논문집*, 2022"
-      - bullet: "Core-token Attention: 토큰 프루닝 기반 셀프 어텐션 경량화 메커니즘 — 윤정민, 이은주, 진교훈, 장수진, 최주원, 고병란, 김영빈, *대한전자공학회 학술대회*, 2022"
-      - bullet: "스타일 트랜스퍼를 활용한 자율주행 데이터셋 증강 기법 — 조수진, 장수진, 이은주, 김영빈, *한국정보과학회 학술발표논문집*, 2021"
-      - bullet: "한국어 악성 댓글 탐지 성능 향상을 위한 낮은 유사도 기반 Mixup 데이터 증강 방법 — 장수지, 진교훈, 이은주, 김영빈, *한국정보과학회 학술발표논문집*, 2021"
-      - bullet: "군중 탐지 시 거짓 양성 비율 감소를 위한 RDIoU 손실 함수 — 권준형, 이은주, 장수진, 김영빈, *한국정보과학회 학술발표논문집*, 2021"
-      - bullet: "Self-attention을 활용한 효율적인 이미지 리타겟팅 기법 — 이은주, 장수진, 조윤성, 김재원, 김영빈, *한국정보과학회 학술발표논문집*, 2020"
-
     Open Source Projects:
       - name: HyCal-CIL
         summary: Official implementation of HyCal (CVPR 2026), a training-free prototype calibration method for cross-discipline few-shot class-incremental learning on frozen CLIP features.

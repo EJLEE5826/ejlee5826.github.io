@@ -1,0 +1,42 @@
+{%- comment -%}
+  Domestic (Korean) papers from _data/domestic_publications.yml, rendered with the
+  same markup as bib.liquid so the publication styles apply. Only entries where the
+  site owner is within the first `max_position` authors are shown; `hide: true`
+  skips an entry (e.g. one already listed in papers.bib).
+{%- endcomment -%}
+{%- assign max_position = 3 -%}
+{%- assign self_names = '이은주|Eunju Lee|EunJu Lee' | split: '|' -%}
+{%- assign entries = site.data.domestic_publications | sort: 'date' | reverse -%}
+{%- capture items -%}
+  {%- for p in entries -%}
+    {%- if p.hide -%}{%- continue -%}{%- endif -%}
+    {%- assign position = 0 -%}
+    {%- for a in p.authors -%}
+      {%- if self_names contains a -%}{%- assign position = forloop.index -%}{%- break -%}{%- endif -%}
+    {%- endfor -%}
+    {%- if position == 0 or position > max_position -%}{%- continue -%}{%- endif -%}
+    <li>
+      <div class="row">
+        <div class="pub-body">
+          {%- if p.award -%}
+            <div class="abbr"><span class="badge badge-presentation">{{ p.award }}</span></div>
+          {%- endif -%}
+          <div class="title">
+            {%- if p.url -%}<a href="{{ p.url }}">{{ p.title }}</a>{%- else -%}{{ p.title }}{%- endif -%}
+          </div>
+          <div class="author">
+            {%- for a in p.authors -%}
+              {%- if self_names contains a -%}<em>{{ a }}</em>{%- else -%}{{ a }}{%- endif -%}
+              {%- unless forloop.last -%}, {% endunless -%}
+            {%- endfor -%}
+          </div>
+          <div class="periodical"><em>{{ p.venue }}</em>, {{ p.date | slice: 0, 4 }}</div>
+        </div>
+      </div>
+    </li>
+  {%- endfor -%}
+{%- endcapture -%}
+{%- if items contains '<li>' -%}
+  <h2 class="bibliography">Domestic</h2>
+  <ol class="bibliography domestic">{{ items }}</ol>
+{%- endif -%}

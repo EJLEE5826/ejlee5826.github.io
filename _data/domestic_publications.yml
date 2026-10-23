@@ -1,0 +1,118 @@
+# Domestic (Korean) papers, listed at the bottom of the Publications page by
+# _includes/domestic_publications.liquid. Only entries where Eunju Lee is within the
+# first 3 authors are shown; the rest stay here as an archive.
+# `hide: true` skips an entry that is already listed in _bibliography/papers.bib.
+# `award` shows a filled badge above the title (same style as Oral/Spotlight).
+# Sources: DBpia (author ancId=4618155), checked 2026-10-22.
+
+- title: "배경 인식 Negative Label 분리를 이용한 CLIP 기반 Zero-shot OOD 탐지 방법"
+  authors: [] # not found on DBpia
+  venue: ""
+  date: "2026"
+  hide: true # owner asked to keep this one off the site
+
+- title: "Training-Free IoU-Clustering Reranking for Video Moment Retrieval"
+  authors: [조선희, 이승후, 유승욱, 이은주, 김성은, 김영빈]
+  venue: 대한전자공학회 하계학술대회
+  date: "2025.06"
+  url: https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12332590
+
+- title: "Null 성분 복원 기반 표현 공간 확장을 통한 선호도 학습 최적화"
+  authors: [우윤규, 윤정민, 이은주, 이윤지, 김영빈]
+  venue: 대한전자공학회 하계학술대회
+  date: "2025.06"
+  url: https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12332316
+
+- title: "생성형 인공지능 기반 웹툰 창작의 가능성"
+  authors: [황윤희, 김재웅, 이은주, 이승후, 정임정]
+  venue: 만화애니메이션연구
+  date: "2025.03"
+  url: https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12127974
+
+- title: "Beyond the Lines: Grayscale-Driven Dual-Guided GANs for Enhanced Sketch Image Colorization"
+  authors: [SeungHoo Lee, JuneHyoung Kwon, Jooweon Choi, Mihyeon Kim, Eunju Lee, YoungBin Kim]
+  venue: ICTC
+  date: "2024.10"
+  url: https://ieeexplore.ieee.org/document/10827481/
+  hide: true # listed in papers.bib (lee2024beyond)
+
+- title: "DualColor: Dual-Guided Colorization with Grayscale Knowledge Transfer for Vivid Sketch Colorization"
+  authors: [이승후, 권준형, 최주원, 김미현, 이은주, 김영빈]
+  venue: 대한전자공학회 하계학술대회
+  date: "2024.06"
+  url: https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11891342
+
+- title: "D6: Disentangling Directional Motion Deblurring with Dual Decoder Diffusion"
+  authors: [이승훈, 김미현, 이은주, 김영빈]
+  venue: 대한전자공학회 하계학술대회
+  date: "2024.06"
+  url: https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11891339
+
+- title: "약지도 의미론적 분할 시 지름길 특징 문제 완화를 위한 데이터 증강 방법"
+  authors: [권준형, 이은주, 김영빈]
+  venue: 한국컴퓨터그래픽스학회 학술대회
+  date: "2023.07"
+  url: https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11492751
+
+- title: "확률적 소프트 프롬프트: 프롬프트를 통한 저자원 NLI의 강인성 향상"
+  authors: [이수현, 이은주, 권준형, 김영빈]
+  venue: 대한전자공학회 하계학술대회
+  date: "2023.06"
+  url: https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11522853
+
+- title: "효과적인 최적 프레임 선택을 위한 Self-Channel Attention Head 및 Weighted Margin Ranking Loss"
+  award: AI학과장상
+  authors: [이은주, 권준형, 박필서, 조윤성, 장수진, 김영빈]
+  venue: 대한전자공학회 하계종합학술대회
+  date: "2022.06"
+  url: https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11133132
+
+- title: "Core-token Attention: 토큰 프루닝 기반 셀프 어텐션 경량화 메커니즘"
+  authors: [윤정민, 이은주, 진교훈, 장수진, 최주원, 고벽란, 김영빈]
+  venue: 대한전자공학회 하계종합학술대회
+  date: "2022.06"
+  url: https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11133107
+
+- title: "수학 문장제 해결을 위한 PLM 기반 수리적 추론의 필요성에 대한 성능 비교"
+  authors: [송상민, 진교훈, 조수진, 이은주, 김영빈]
+  venue: 한국정보과학회 학술발표논문집
+  date: "2022.06"
+  url: https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11113371
+
+- title: "Repulsion Distance Intersection over Union Loss for Crowd Scene Detection"
+  authors: [YuChul Shin, Eunju Lee, Soojin Jang, YoungBin Kim, JuneHyoung Kwon]
+  venue: "TECHART: Journal of Arts and Imaging Science"
+  date: "2022.02"
+  url: https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11036961
+  hide: true # listed in papers.bib (shin2022rdiou)
+
+- title: "한국어 악성 댓글 탐지 성능 향상을 위한 낮은 유사도 기반 Mixup 데이터 증강 방법"
+  authors: [장수지, 진교훈, 이은주, 김영빈]
+  venue: 한국정보과학회 학술발표논문집
+  date: "2021.06"
+  url: https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE10582950
+
+- title: "스타일 트랜스퍼를 활용한 자율주행 데이터셋 증강 기법"
+  authors: [조수진, 장수진, 이은주, 김영빈]
+  venue: 한국정보과학회 학술발표논문집
+  date: "2021.06"
+  url: https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE10583059
+
+- title: "군중 탐지 시 거짓 양성 비율 감소를 위한 RDIoU 손실 함수"
+  authors: [권준형, 이은주, 장수진, 김영빈]
+  venue: 한국정보과학회 학술발표논문집
+  date: "2021.06"
+  url: https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE10583046
+
+- title: "Self-attention을 활용한 효율적인 이미지 리타겟팅 기법"
+  award: 우수논문상
+  authors: [이은주, 장수진, 조윤성, 김재원, 김영빈]
+  venue: 한국정보과학회 학술발표논문집
+  date: "2020.07"
+  url: https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE09874471
+
+- title: "인물사진의 감성 선호도 측정 자동화 프로그램 모형 개발 연구"
+  authors: [이창섭, 정다연, 이은주, 하동환]
+  venue: 한국콘텐츠학회논문지
+  date: "2018.09"
+  url: https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE07538425

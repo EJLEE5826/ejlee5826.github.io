@@ -2,7 +2,7 @@
 layout: page
 permalink: /publications/
 title: Publications
-description: International publications in reverse chronological order. See the CV for domestic papers.
+description: International publications in reverse chronological order, followed by domestic papers.
 nav: true
 nav_order: 1
 images:
@@ -12,5 +12,7 @@ images:
 <div class="publications">
 
 {% bibliography %}
+
+{% include domestic_publications.liquid %}
 
 </div>

@@ -654,11 +654,27 @@ blockquote {
 
     > .pub-body,
     > .preview-col {
-      width: auto;
-      max-width: none;
+      width: 100%;
+      max-width: 100%;
       flex: none;
       padding: 0;
       min-width: 0;
+    }
+  }
+
+  // Long titles, URLs and the BibTeX block must wrap/scroll inside the column on phones
+  .pub-body {
+    overflow-wrap: anywhere;
+
+    div.bibtex,
+    figure.highlight {
+      display: block;
+      max-width: 100%;
+    }
+
+    figure.highlight pre {
+      max-width: 100%;
+      overflow-x: auto;
     }
   }
 
