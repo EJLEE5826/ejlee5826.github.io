@@ -1,0 +1,185 @@
+# English CV, rendered on /cv/ (English tab) by _includes/cv_body.liquid.
+# Each section is {title, type, entries}; `type` picks the al_folio_cv template
+# (experience, education, publications, awards, skills, interests, projects).
+# Dates are "YYYY.MM" or "YYYY"; an entry without end_date shows "Present".
+# Keep the structure in sync with cv_ko.yml.
+
+labels:
+  contact: Contact
+  name: Name
+  title: Title
+  email: Email
+  website: Website
+  summary: Summary
+
+name: Eunju Lee
+label: Ph.D. Student · Computer Vision & Multimodal AI
+email: dmswn5829@cau.ac.kr
+website: https://ejlee5826.github.io/
+summary: >-
+  I work on computer vision and multimodal AI, including visual recognition, semantic segmentation,
+  domain generalization, and few-shot and continual learning. Through an industry research internship and
+  academic and industry-collaborative research, I have designed and implemented visual recognition
+  algorithms, built datasets and benchmarks, and validated performance quantitatively.
+
+sections:
+  - title: Core Expertise
+    type: interests
+    entries:
+      - name: Visual Perception
+        icon: fa-solid fa-eye
+        keywords: [Semantic segmentation, Open-vocabulary recognition, Visual attribute recognition]
+      - name: Robust Learning
+        icon: fa-solid fa-layer-group
+        keywords: [Domain generalization, Few-shot learning, Continual learning, Bias mitigation]
+      - name: Algorithm Development
+        icon: fa-solid fa-code
+        keywords: [Model architecture design, Weakly supervised learning, Benchmark design, Quantitative evaluation]
+
+  - title: Experience
+    type: experience
+    entries:
+      - position: AI Research Intern
+        company: NCSOFT · Vision AI Understanding Team
+        start_date: "2022.09"
+        end_date: "2023.02"
+        summary: Open-vocabulary fashion attribute segmentation and recognition
+        highlights:
+          - Built a Fashionpedia-based vocabulary set and studied open-vocabulary segmentation and attribute recognition models
+          - Ran experiments with OV-Seg, CLIP, and Swin-based models and improved performance through prompt design and background masking
+          - Implemented models, analyzed results, and documented and handed over the research code and environments
+
+  - title: Research Experience
+    type: experience
+    entries:
+      - position: Graduate Researcher
+        company: Intelligent Information Processing Lab (IIPL), Chung-Ang University
+        url: https://iiplcau.github.io/
+        start_date: "2020.03"
+        highlights:
+          - Visual recognition algorithms based on computer vision and multimodal AI
+          - Semantic segmentation, cross-domain generalization, and few-shot and continual learning
+          - Model design and implementation, benchmark construction, ablation studies, and performance validation
+          - International publications and industry-collaborative R&D projects
+      - position: Optical Satellite Imagery Dataset Construction
+        company: Research project related to the Korea Aerospace Research Institute (KARI)
+        date: "2021"
+        highlights:
+          - Took part in labeling an optical satellite imagery dataset for AI training
+
+  - title: Selected Research
+    type: projects
+    entries:
+      - name: "HyCal: Cross-Discipline Few-Shot Class-Incremental Learning"
+        url: https://arxiv.org/abs/2604.15678
+        date: "2026"
+        summary: CVPR 2026 · Co-first author
+        highlights:
+          - "**Problem:** prototype drift and degraded recognition across heterogeneous domains and imbalanced data"
+          - "**Approach:** designed the XD-VSCIL benchmark spanning 8 heterogeneous domains and proposed a training-free prototype calibration that combines cosine similarity and Mahalanobis distance"
+          - "**Validation:** evaluated under varying shot and imbalance settings, with per-domain, incremental-session, and calibration analyses"
+      - name: Weakly Supervised Object Detection for Construction Sites
+        url: https://doi.org/10.1109/ACCESS.2024.3423697
+        date: "2024"
+        summary: IEEE Access 2024 · Co-first author
+        highlights:
+          - "**Problem:** locating objects on construction sites accurately when only limited annotation is available"
+          - "**Approach:** a weakly supervised framework built on an enhanced class activation map (CAM)"
+          - "**Validation:** quantitative comparison against baselines on real construction-site images"
+      - name: "XTag-CLIP: Thyroid Scar Analysis with Limited Data"
+        url: https://doi.org/10.1007/978-3-032-09569-5_15
+        date: "2025"
+        summary: AMAI @ MICCAI 2025 · First author
+        highlights:
+          - Fine-grained visual attribute recognition for medical images with limited data, using CLIP and cross-attention
+      - name: Cross-Dataset Continual Segmentation for Remote Sensing
+        date: "2026"
+        summary: Ongoing research
+        highlights:
+          - Benchmark and evaluation of class-incremental semantic segmentation under sensor and annotation shift across remote-sensing datasets
+
+  - title: Education
+    type: education
+    entries:
+      - studyType: Ph.D. in Image Engineering
+        institution: Chung-Ang University
+        area: Graduate School of Advanced Imaging Science, Multimedia & Film
+        start_date: "2022.03"
+        highlights:
+          - Intelligent Information Processing Lab (IIPL), advised by Prof. YoungBin Kim
+      - studyType: M.S. in Image Engineering
+        institution: Chung-Ang University
+        area: Graduate School of Advanced Imaging Science, Multimedia & Film
+        start_date: "2020.03"
+        end_date: "2022.02"
+        highlights:
+          - "Thesis: *Self-Channel Attention and Weighted Margin Ranking Loss for Best Frame Selection*"
+      - studyType: B.S.
+        institution: Chung-Ang University
+        start_date: "2015.03"
+        end_date: "2020.02"
+
+  - title: Selected Publications
+    type: publications
+    note: 34 papers in total (22 international, 12 domestic). See the [full list](/publications/). \* Equal contribution.
+    entries:
+      - title: "HyCal: A Training-Free Prototype Calibration Method for Cross-Discipline Few-Shot Class-Incremental Learning"
+        summary: "**Eunju Lee\\***, MiHyeon Kim\\*, JuneHyoung Kwon, Yoonji Lee, JiHyun Kim, Soojin Jang, YoungBin Kim"
+        publisher: CVPR 2026
+        releaseDate: "2026"
+        url: https://arxiv.org/abs/2604.15678
+      - title: "RI-Prune: Relation and Information Aware Visual Token Pruning for Multi-Image Vision-Language Models"
+        summary: "Dongjin Lee, **Eunju Lee**, Jinhee Jang, Yoonji Lee, YoungBin Kim"
+        publisher: CIKM 2026 · Oral
+        releaseDate: "2026"
+      - title: "Misalignment-Free Defocus Deblurring via Optically Guided Aligned Synthesis"
+        summary: "SeungHoon Lee, **Eunju Lee**, JuneHyoung Kwon, Jinhee Jang, YoungBin Kim"
+        publisher: WACV 2027
+        releaseDate: "2027"
+      - title: "DIAL: Dense Image-text ALignment for Weakly Supervised Semantic Segmentation"
+        summary: "Soojin Jang, Jungmin Yun, JuneHyoung Kwon, **Eunju Lee**, YoungBin Kim"
+        publisher: ECCV 2024
+        releaseDate: "2024"
+        url: https://doi.org/10.1007/978-3-031-72890-7_15
+      - title: "Learning to Detour: Shortcut Mitigating Augmentation for Weakly Supervised Semantic Segmentation"
+        summary: "JuneHyoung Kwon, **Eunju Lee**, Yunsung Cho, YoungBin Kim"
+        publisher: WACV 2024
+        releaseDate: "2024"
+        url: https://doi.org/10.1109/WACV57701.2024.00087
+      - title: "A Weakly Supervised Learning Framework Utilizing Enhanced Class Activation Map for Object Detection in Construction Sites"
+        summary: "Jaehun Yang\\*, **Eunju Lee\\***, JuneHyoung Kwon, Dongmin Lee, YoungBin Kim, Chansik Park, Doyeop Lee"
+        publisher: IEEE Access 2024
+        releaseDate: "2024"
+        url: https://doi.org/10.1109/ACCESS.2024.3423697
+
+  - title: Awards
+    type: awards
+    entries:
+      - title: Department Chair's Award, Department of Artificial Intelligence
+        awarder: Chung-Ang University · IEIE Summer Conference
+        date: "2022"
+        summary: Self-Channel Attention Head and Weighted Margin Ranking Loss for effective best frame selection
+      - title: Outstanding Paper Award
+        awarder: Korean Institute of Information Scientists and Engineers (KIISE)
+        date: "2020"
+        summary: Efficient image retargeting with self-attention
+
+  - title: Skills
+    type: skills
+    entries:
+      - name: Programming
+        keywords: [Python]
+      - name: Frameworks & Tools
+        keywords: [PyTorch, Git/GitHub, Docker]
+      - name: Vision Models
+        keywords: [CLIP, Vision Transformer, Swin Transformer, ResNet, OV-Seg]
+      - name: Research & Evaluation
+        keywords: [mIoU, mACC, F1, Ablation study, Benchmark design, Failure analysis]
+
+  - title: Open Source
+    type: projects
+    entries:
+      - name: HyCal-CIL
+        url: https://github.com/EJLEE5826/HyCal-CIL
+        date: "2026"
+        summary: Official implementation of HyCal (CVPR 2026), training-free prototype calibration for cross-discipline few-shot class-incremental learning on frozen CLIP features.

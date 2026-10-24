@@ -1,0 +1,183 @@
+# 국문 CV, rendered on /cv/#ko (한국어 tab) by _includes/cv_body.liquid.
+# Same structure as cv_en.yml; ongoing entries set end_date: 현재 because the
+# al_folio_cv templates print "Present" when end_date is missing.
+
+labels:
+  contact: 연락처
+  name: 이름
+  title: 소속
+  email: 이메일
+  website: 웹사이트
+  summary: 소개
+
+name: 이은주 (Eunju Lee)
+label: 박사과정 · Computer Vision & Multimodal AI
+email: dmswn5829@cau.ac.kr
+website: https://ejlee5826.github.io/
+summary: >-
+  Computer Vision 및 Multimodal AI 분야에서 Visual Recognition, Semantic Segmentation,
+  Domain Generalization, Few-Shot/Continual Learning을 연구해 왔습니다. 기업 연구 인턴십과
+  학술·산학 연구를 통해 영상인지 알고리즘 설계·구현, 데이터셋 및 벤치마크 구축,
+  성능 개선과 정량적 검증을 수행했습니다.
+
+sections:
+  - title: 핵심 역량
+    type: interests
+    entries:
+      - name: Visual Perception
+        icon: fa-solid fa-eye
+        keywords: [Semantic Segmentation, Open-Vocabulary Recognition, Visual Attribute Recognition]
+      - name: Robust Learning
+        icon: fa-solid fa-layer-group
+        keywords: [Domain Generalization, Few-Shot Learning, Continual Learning, Bias Mitigation]
+      - name: Algorithm Development
+        icon: fa-solid fa-code
+        keywords: [Model Architecture, Weakly Supervised Learning, Benchmark Design, Quantitative Evaluation]
+
+  - title: 경력
+    type: experience
+    entries:
+      - position: AI Research Intern
+        company: NCSOFT · Vision AI Understanding Team
+        start_date: "2022.09"
+        end_date: "2023.02"
+        summary: Open-Vocabulary Fashion Attribute Segmentation & Recognition
+        highlights:
+          - Fashionpedia 기반 Vocabulary Set 구축 및 Open-Vocabulary Segmentation·Attribute Recognition 모델 연구
+          - OV-Seg, CLIP, Swin 기반 모델 실험 및 Prompt Design·Background Mask를 통한 성능 개선
+          - 모델 구현, 실험 분석, 연구 코드 및 실행 환경 정리·이관
+
+  - title: 연구 경력
+    type: experience
+    entries:
+      - position: 대학원 연구원
+        company: 중앙대학교 지능정보처리연구실 (IIPL)
+        url: https://iiplcau.github.io/
+        start_date: "2020.03"
+        end_date: 현재
+        highlights:
+          - Computer Vision 및 Multimodal AI 기반 영상인지 알고리즘 연구
+          - Semantic Segmentation, Cross-Domain Generalization, Few-Shot/Continual Learning 연구
+          - 모델 설계·구현, Benchmark 구성, Ablation 및 성능 검증
+          - 국제학회 논문 및 산학 연구개발 과제 참여
+      - position: 광학 위성영상 AI 학습용 데이터셋 구축
+        company: 한국항공우주연구원 관련 연구과제
+        date: "2021"
+        highlights:
+          - 광학 위성영상 기반 AI 학습용 데이터셋 Labeling 구축 과제 참여
+
+  - title: 대표 연구
+    type: projects
+    entries:
+      - name: "HyCal: Cross-Discipline Few-Shot Class-Incremental Learning"
+        url: https://arxiv.org/abs/2604.15678
+        date: "2026"
+        summary: CVPR 2026 · 공동 제1저자
+        highlights:
+          - "**문제:** 이종 도메인과 데이터 불균형 환경에서 발생하는 Prototype Drift 및 인식 성능 저하"
+          - "**접근:** 8개 이종 도메인 기반 XD-VSCIL Benchmark 설계, Cosine Similarity와 Mahalanobis Distance를 결합한 Training-Free Prototype Calibration 제안"
+          - "**검증:** 다양한 Shot·Imbalance 조건에서 성능 검증, 도메인별·Incremental 단계별·Calibration 효과 분석"
+      - name: 건설현장 Weakly Supervised Object Detection
+        url: https://doi.org/10.1109/ACCESS.2024.3423697
+        date: "2024"
+        summary: IEEE Access 2024 · 공동 제1저자
+        highlights:
+          - "**문제:** 제한적인 Annotation 조건에서 건설현장 객체의 정확한 위치 추정"
+          - "**접근:** 개선된 Class Activation Map(CAM) 기반 Weakly Supervised 학습 프레임워크"
+          - "**검증:** 실제 건설현장 영상 데이터에서 Baseline 대비 정량적 성능 비교"
+      - name: "XTag-CLIP: 제한된 데이터 환경의 갑상선 수술 흉터 분석"
+        url: https://doi.org/10.1007/978-3-032-09569-5_15
+        date: "2025"
+        summary: AMAI @ MICCAI 2025 · 제1저자
+        highlights:
+          - CLIP·Cross-Attention 기반 의료영상 Fine-grained Visual Attribute Recognition
+      - name: 원격탐사 영상 Cross-Dataset Continual Segmentation
+        date: "2026"
+        summary: 진행 중인 연구
+        highlights:
+          - 원격탐사 데이터셋 간 센서·Annotation 변화 조건에서의 Class-Incremental Semantic Segmentation 벤치마크 및 평가 연구
+
+  - title: 학력
+    type: education
+    entries:
+      - studyType: 박사과정, 영상학과 (Image Engineering)
+        institution: 중앙대학교 첨단영상대학원
+        start_date: "2022.03"
+        end_date: 현재
+        highlights:
+          - 지능정보처리연구실 (IIPL), 지도교수 김영빈
+      - studyType: 석사, 영상학과 (Image Engineering)
+        institution: 중앙대학교 첨단영상대학원
+        start_date: "2020.03"
+        end_date: "2022.02"
+        highlights:
+          - "학위논문: *최적 프레임 선택을 위한 자기 채널 주의 및 가중치 마진 랭킹 손실* (Self-Channel Attention and Weighted Margin Ranking Loss for Best Frame Selection)"
+      - studyType: 학사
+        institution: 중앙대학교
+        start_date: "2015.03"
+        end_date: "2020.02"
+
+  - title: 주요 논문
+    type: publications
+    note: 총 34편 (국제 22편, 국내 12편). [전체 목록](/publications/) 참고. \* 공동 제1저자.
+    entries:
+      - title: "HyCal: A Training-Free Prototype Calibration Method for Cross-Discipline Few-Shot Class-Incremental Learning"
+        summary: "**Eunju Lee\\***, MiHyeon Kim\\*, JuneHyoung Kwon, Yoonji Lee, JiHyun Kim, Soojin Jang, YoungBin Kim"
+        publisher: CVPR 2026
+        releaseDate: "2026"
+        url: https://arxiv.org/abs/2604.15678
+      - title: "RI-Prune: Relation and Information Aware Visual Token Pruning for Multi-Image Vision-Language Models"
+        summary: "Dongjin Lee, **Eunju Lee**, Jinhee Jang, Yoonji Lee, YoungBin Kim"
+        publisher: CIKM 2026 · Oral
+        releaseDate: "2026"
+      - title: "Misalignment-Free Defocus Deblurring via Optically Guided Aligned Synthesis"
+        summary: "SeungHoon Lee, **Eunju Lee**, JuneHyoung Kwon, Jinhee Jang, YoungBin Kim"
+        publisher: WACV 2027
+        releaseDate: "2027"
+      - title: "DIAL: Dense Image-text ALignment for Weakly Supervised Semantic Segmentation"
+        summary: "Soojin Jang, Jungmin Yun, JuneHyoung Kwon, **Eunju Lee**, YoungBin Kim"
+        publisher: ECCV 2024
+        releaseDate: "2024"
+        url: https://doi.org/10.1007/978-3-031-72890-7_15
+      - title: "Learning to Detour: Shortcut Mitigating Augmentation for Weakly Supervised Semantic Segmentation"
+        summary: "JuneHyoung Kwon, **Eunju Lee**, Yunsung Cho, YoungBin Kim"
+        publisher: WACV 2024
+        releaseDate: "2024"
+        url: https://doi.org/10.1109/WACV57701.2024.00087
+      - title: "A Weakly Supervised Learning Framework Utilizing Enhanced Class Activation Map for Object Detection in Construction Sites"
+        summary: "Jaehun Yang\\*, **Eunju Lee\\***, JuneHyoung Kwon, Dongmin Lee, YoungBin Kim, Chansik Park, Doyeop Lee"
+        publisher: IEEE Access 2024
+        releaseDate: "2024"
+        url: https://doi.org/10.1109/ACCESS.2024.3423697
+
+  - title: 수상
+    type: awards
+    entries:
+      - title: AI학과장상
+        awarder: 중앙대학교 · 대한전자공학회 하계종합학술대회
+        date: "2022"
+        summary: 효과적인 최적 프레임 선택을 위한 Self-Channel Attention Head 및 Weighted Margin Ranking Loss
+      - title: 우수논문상
+        awarder: 한국정보과학회
+        date: "2020"
+        summary: Self-attention을 활용한 효율적인 이미지 리타겟팅 기법
+
+  - title: 기술
+    type: skills
+    entries:
+      - name: Programming
+        keywords: [Python]
+      - name: Frameworks & Tools
+        keywords: [PyTorch, Git/GitHub, Docker]
+      - name: Vision Models
+        keywords: [CLIP, Vision Transformer, Swin Transformer, ResNet, OV-Seg]
+      - name: Research & Evaluation
+        keywords: [mIoU, mACC, F1, Ablation Study, Benchmark Design, Failure Analysis]
+
+  - title: 오픈소스
+    type: projects
+    entries:
+      - name: HyCal-CIL
+        url: https://github.com/EJLEE5826/HyCal-CIL
+        date: "2026"
+        summary: HyCal (CVPR 2026) 공식 구현. Frozen CLIP feature 기반 Cross-Discipline Few-Shot Class-Incremental Learning을 위한 Training-Free Prototype Calibration.

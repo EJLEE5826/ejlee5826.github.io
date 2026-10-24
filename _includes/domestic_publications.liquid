@@ -37,6 +37,6 @@
   {%- endfor -%}
 {%- endcapture -%}
 {%- if items contains '<li>' -%}
-  <h2 class="bibliography">Domestic</h2>
+  {%- unless include.heading == false -%}<h2 class="bibliography">Domestic</h2>{%- endunless -%}
   <ol class="bibliography domestic">{{ items }}</ol>
 {%- endif -%}

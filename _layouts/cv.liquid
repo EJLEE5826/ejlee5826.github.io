@@ -1,0 +1,19 @@
+---
+layout: default
+---
+{%- comment -%}
+  Local override of al_folio_core's cv layout: renders the page content (the
+  English/한국어 tabs in _pages/cv.md, built with _includes/cv_body.liquid) instead of
+  the single-language al_folio_cv_render tag. Keeping the name `cv` makes head.liquid
+  load al-folio-cv.css.
+{%- endcomment -%}
+<div class="post">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    {% if page.description %}<p class="post-description">{{ page.description }}</p>{% endif %}
+  </header>
+
+  <article>
+    {{ content }}
+  </article>
+</div>

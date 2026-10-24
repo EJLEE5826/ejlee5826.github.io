@@ -274,11 +274,6 @@ footer.sticky-bottom {
   }
 }
 
-.clearfix > p:first-of-type {
-  font-size: 1.15rem;
-  line-height: 1.55;
-}
-
 // News table
 .news {
   .table-responsive {
@@ -789,4 +784,77 @@ body .al-lightbox-nav {
   &:disabled {
     opacity: 0.2;
   }
+}
+
+// Publications: International / Domestic tabs (plain text, active one underlined)
+.pub-tabs {
+  display: flex;
+  gap: 1.75rem;
+  border-bottom: 1px solid $rule;
+  margin-bottom: 2rem;
+
+  [role="tab"] {
+    appearance: none;
+    background: none;
+    border: 0;
+    border-bottom: 1px solid transparent;
+    margin-bottom: -1px;
+    padding: 0 0 0.75rem;
+    font-family: $font-stack;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    color: $muted;
+    cursor: pointer;
+
+    &:hover {
+      color: $ink;
+    }
+
+    &[aria-selected="true"] {
+      color: $ink;
+      border-bottom-color: $ink;
+    }
+
+    &:focus-visible {
+      outline: 1px solid $ink;
+      outline-offset: 4px;
+    }
+  }
+}
+
+.pub-panel[hidden] {
+  display: none;
+}
+
+// The tab bar already draws a rule, so the first year heading in a panel drops its own
+.publications .pub-panel h2.bibliography:first-of-type {
+  border-top: 0;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+// CV language tabs: the tab rule replaces the first section's top rule
+.pub-panel > .cv > .card:first-child {
+  border-top: 0;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.cv .cv-note {
+  color: $muted;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+// al_folio_core styles `.cv .card .list-group-item .badge` as a filled theme badge;
+// match its specificity so CV dates stay plain muted text, and drop list bullets.
+.cv .card .list-group-item .badge {
+  background: transparent !important;
+  color: $muted !important;
+}
+
+.cv ul.list-group {
+  list-style: none;
+  padding-left: 0;
 }

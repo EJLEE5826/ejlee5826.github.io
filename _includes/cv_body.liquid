@@ -1,0 +1,44 @@
+{%- comment -%}
+  One language version of the CV from _data/cv_<lang>.yml (pass it as `cv`). Uses the
+  markup of the al_folio_cv render template so the `.cv` styles in _minimal.scss apply,
+  and reuses its per-section templates (cv/*.liquid, which read `entries`).
+{%- endcomment -%}
+{%- assign cv = include.cv -%}
+{%- assign labels = cv.labels -%}
+<div class="cv">
+  <div class="card mt-3 p-3">
+    <h3 class="card-title font-weight-medium">{{ labels.contact }}</h3>
+    <table class="table table-cv table-sm table-borderless">
+      <tr><td class="p-1 pr-2 font-weight-bold"><b>{{ labels.name }}</b></td><td class="p-1 pl-2 font-weight-light">{{ cv.name }}</td></tr>
+      <tr><td class="p-1 pr-2 font-weight-bold"><b>{{ labels.title }}</b></td><td class="p-1 pl-2 font-weight-light">{{ cv.label }}</td></tr>
+      <tr><td class="p-1 pr-2 font-weight-bold"><b>{{ labels.email }}</b></td><td class="p-1 pl-2 font-weight-light"><a href="mailto:{{ cv.email }}">{{ cv.email }}</a></td></tr>
+      <tr><td class="p-1 pr-2 font-weight-bold"><b>{{ labels.website }}</b></td><td class="p-1 pl-2 font-weight-light"><a href="{{ cv.website }}">{{ cv.website }}</a></td></tr>
+    </table>
+  </div>
+
+  <div class="card mt-3 p-3">
+    <h3 class="card-title font-weight-medium">{{ labels.summary }}</h3>
+    <p>{{ cv.summary }}</p>
+  </div>
+
+  {% for section in cv.sections %}
+    {%- assign entries = section.entries -%}
+    <div class="card mt-3 p-3">
+      <h3 class="card-title font-weight-medium">{{ section.title }}</h3>
+      {%- if section.note -%}
+        <p class="cv-note">{{ section.note | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+      {%- endif -%}
+      <div>
+        {%- case section.type -%}
+          {%- when 'experience' -%}{% include cv/experience.liquid %}
+          {%- when 'education' -%}{% include cv/education.liquid %}
+          {%- when 'publications' -%}{% include cv/publications.liquid %}
+          {%- when 'awards' -%}{% include cv/awards.liquid %}
+          {%- when 'skills' -%}{% include cv/skills.liquid %}
+          {%- when 'interests' -%}{% include cv/interests.liquid %}
+          {%- when 'projects' -%}{% include cv/projects.liquid %}
+        {%- endcase -%}
+      </div>
+    </div>
+  {% endfor %}
+</div>
