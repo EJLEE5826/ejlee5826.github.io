@@ -26,13 +26,13 @@ sections:
     entries:
       - name: Visual Perception
         icon: fa-solid fa-eye
-        keywords: [Semantic Segmentation, Open-Vocabulary Recognition, Visual Attribute Recognition]
+        keywords: [Semantic Segmentation, Weakly Supervised Segmentation, Open-Vocabulary Recognition, Visual Attribute Recognition]
       - name: Robust Learning
         icon: fa-solid fa-layer-group
         keywords: [Domain Generalization, Few-Shot Learning, Continual Learning, Bias Mitigation]
       - name: Algorithm Development
         icon: fa-solid fa-code
-        keywords: [Model Architecture, Weakly Supervised Learning, Benchmark Design, Quantitative Evaluation]
+        keywords: [Model Architecture, Benchmark Design, Quantitative Evaluation]
 
   - title: 경력
     type: experience

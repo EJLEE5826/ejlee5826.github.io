@@ -35,3 +35,5 @@ My research is on making vision and vision-language models learn reliably when d
 Recent work includes HyCal (CVPR 2026, co-first author), a training-free prototype calibration method for cross-discipline few-shot class-incremental learning, and XTag-CLIP (AMAI @ MICCAI 2025), a cross-attention approach to thyroid scar analysis with limited data.
 
 I am happy to talk about research or collaboration. The quickest way to reach me is by email.
+
+<script defer src="{{ '/assets/js/pub-lightbox-strip.js' | relative_url }}"></script>

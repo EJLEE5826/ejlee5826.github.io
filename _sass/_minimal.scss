@@ -875,13 +875,14 @@ body .al-lightbox-nav {
   position: absolute;
   right: 0.4rem;
   bottom: 0.4rem;
-  background: $ink;
-  color: #fff;
+  background: #fff;
+  color: $ink;
+  border: 1px solid $rule;
   border-radius: 999px;
   padding: 0.2rem 0.5rem;
   font-family: $font-stack;
   font-size: 0.68rem;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0.04em;
   line-height: 1;
 }
@@ -943,4 +944,10 @@ body .pub-lightbox-strip {
   @media (min-width: 768px) {
     left: -1.5rem;
   }
+}
+
+// About page: one <ol> per selected paper (see _includes/selected_papers.liquid), so the
+// "last item has no divider" rule would drop every divider; restore them between lists.
+.selected-papers ol.bibliography:not(:last-of-type) li:last-child {
+  border-bottom: 1px solid $rule;
 }

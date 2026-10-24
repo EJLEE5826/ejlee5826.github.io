@@ -1,0 +1,10 @@
+{%- comment -%}
+  Local override of al_folio_core's selected_papers.liquid: the About page lists the
+  entries whose `selected` field is 1, 2, 3, ... in that order (the gem version shows
+  every `selected = {true}` entry in file order).
+{%- endcomment -%}
+<div class="publications selected-papers">
+  {%- for i in (1..9) %}
+    {% bibliography --group_by none --query @*[selected={{ i }}]* %}
+  {%- endfor %}
+</div>
