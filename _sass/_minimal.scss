@@ -357,6 +357,18 @@ footer.sticky-bottom {
 // Publications
 // ---------------------------------------------------------------------------
 
+// Square tag shared by the venue badge (outlined) and Oral/Spotlight/award badges (filled)
+%pub-tag {
+  display: inline-block;
+  border: 1px solid $ink;
+  border-radius: 0;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
 .publications {
   margin-top: 0;
 
@@ -396,17 +408,11 @@ footer.sticky-bottom {
         padding-left: 0;
 
         abbr.badge {
-          display: inline-block;
+          @extend %pub-tag;
           width: auto !important;
           background: transparent !important;
           color: $ink !important;
-          border: 1px solid $ink;
-          border-radius: 999px;
-          padding: 0.2rem 0.6rem;
-          font-size: 0.68rem;
           font-weight: 500;
-          letter-spacing: 0.04em;
-          text-transform: uppercase;
           text-decoration: none;
           cursor: default;
 
@@ -696,17 +702,10 @@ blockquote {
   }
 
   .badge-presentation {
-    display: inline-block;
+    @extend %pub-tag;
     background: $ink;
     color: #fff !important;
-    border: 1px solid $ink;
-    border-radius: 999px;
-    padding: 0.2rem 0.6rem;
-    font-size: 0.68rem;
     font-weight: 600;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    line-height: 1; // same height as the venue badge
   }
 
   // Fixed 3:2 landscape box; the figure fills it (cropped), click shows the full figure

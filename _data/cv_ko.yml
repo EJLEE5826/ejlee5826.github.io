@@ -151,7 +151,7 @@ sections:
         releaseDate: "2024"
         url: https://doi.org/10.1109/WACV57701.2024.00087
       - title: "A Weakly Supervised Learning Framework Utilizing Enhanced Class Activation Map for Object Detection in Construction Sites"
-        summary: "Jaehun Yang\\*, **Eunju Lee\\***, JuneHyoung Kwon, Dongmin Lee, YoungBin Kim, Chansik Park, Doyeop Lee"
+        summary: "**Eunju Lee\\***, Jaehun Yang\\*, JuneHyoung Kwon, Dongmin Lee, YoungBin Kim, Chansik Park, Doyeop Lee"
         publisher: IEEE Access 2024
         releaseDate: "2024"
         url: https://doi.org/10.1109/ACCESS.2024.3423697
