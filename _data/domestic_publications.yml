@@ -3,6 +3,7 @@
 # first 3 authors are shown; the rest stay here as an archive.
 # `hide: true` skips an entry that is already listed in _bibliography/papers.bib.
 # `award` shows a filled badge above the title (same style as Oral/Spotlight).
+# `preview` is a thumbnail file in assets/img/publication_preview/ (same as the bib field).
 # Sources: DBpia (author ancId=4618155), checked 2026-10-22.
 
 - title: "배경 인식 Negative Label 분리를 이용한 CLIP 기반 Zero-shot OOD 탐지 방법"
@@ -62,6 +63,7 @@
 
 - title: "효과적인 최적 프레임 선택을 위한 Self-Channel Attention Head 및 Weighted Margin Ranking Loss"
   award: AI학과장상
+  preview: domestic-2022-best-frame.png
   authors: [이은주, 권준형, 박필서, 조윤성, 장수진, 김영빈]
   venue: 대한전자공학회 하계종합학술대회
   date: "2022.06"
@@ -106,6 +108,7 @@
 
 - title: "Self-attention을 활용한 효율적인 이미지 리타겟팅 기법"
   award: 우수논문상
+  preview: domestic-2020-retargeting.png
   authors: [이은주, 장수진, 조윤성, 김재원, 김영빈]
   venue: 한국정보과학회 학술발표논문집
   date: "2020.07"

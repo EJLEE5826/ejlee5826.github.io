@@ -1,0 +1,42 @@
+{%- comment -%}
+  Publication thumbnail (right column). `preview` is a file in
+  assets/img/publication_preview/ or a full URL; `title` is used for alt text.
+  `more` (optional, comma-separated files) adds extra figures: the list shows only the
+  first one with a "+N" badge, the lightbox steps through all of them and
+  assets/js/pub-lightbox-strip.js shows them as a thumbnail strip.
+  Shared by _layouts/bib.liquid and _includes/domestic_publications.liquid.
+{%- endcomment -%}
+{%- assign preview_alt = include.title | strip_html | escape -%}
+{%- assign raster_exts = 'png,jpg,jpeg,gif' | split: ',' -%}
+{%- assign files = include.preview | append: ',' | append: include.more | split: ',' -%}
+{%- assign n_files = 0 -%}
+{%- for f in files -%}{%- assign f = f | strip -%}{%- if f != '' -%}{%- assign n_files = n_files | plus: 1 -%}{%- endif -%}{%- endfor -%}
+<div class="preview-col{% if n_files > 1 %} has-more{% endif %}">
+  {%- for f in files -%}
+    {%- assign f = f | strip -%}
+    {%- if f == '' -%}{%- continue -%}{%- endif -%}
+    {%- if f contains '://' -%}
+      {%- assign preview_full = f -%}
+      {%- assign preview_thumb = f -%}
+    {%- else -%}
+      {%- assign preview_path = f | prepend: '/assets/img/publication_preview/' -%}
+      {%- assign preview_ext = preview_path | split: '.' | last -%}
+      {%- assign preview_base = preview_path | remove: '.png' | remove: '.jpg' | remove: '.jpeg' | remove: '.gif' -%}
+      {%- if site.imagemagick.enabled and raster_exts contains preview_ext -%}
+        {%- assign preview_full = preview_base | append: '-800.webp' | relative_url -%}
+        {%- assign preview_thumb = preview_base | append: '-480.webp' | relative_url -%}
+      {%- else -%}
+        {%- assign preview_full = preview_path | relative_url -%}
+        {%- assign preview_thumb = preview_full -%}
+      {%- endif -%}
+    {%- endif -%}
+    {%- if forloop.first %}
+      <a href="{{ preview_full }}" data-lightbox="publications" data-title="{{ preview_alt }}" data-thumb="{{ preview_thumb }}">
+        <img class="preview" src="{{ preview_thumb }}" alt="{{ preview_alt }}" loading="lazy">
+        {%- if n_files > 1 %}<span class="preview-count" aria-label="{{ n_files }} figures">+{{ n_files | minus: 1 }}</span>{% endif %}
+      </a>
+    {%- else %}
+      <a href="{{ preview_full }}" data-lightbox="publications" data-title="{{ preview_alt }}" data-thumb="{{ preview_thumb }}" hidden></a>
+    {%- endif -%}
+  {%- endfor %}
+</div>

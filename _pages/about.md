@@ -6,7 +6,7 @@ subtitle: Ph.D. student · <a href="https://iiplcau.github.io/">Intelligent Info
 
 # Replace assets/img/prof_pic.jpg with your own photo (same file name) to update the portrait.
 profile:
-  align: right
+  align: left
   image: prof_pic.jpg
   image_circular: false
   more_info: >

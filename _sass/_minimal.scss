@@ -268,6 +268,11 @@ footer.sticky-bottom {
   margin-bottom: 1rem;
 }
 
+.profile.float-left {
+  margin-right: 2.5rem;
+  margin-bottom: 1rem;
+}
+
 @media (min-width: 576px) {
   .profile {
     width: 28%;
@@ -592,7 +597,8 @@ footer.sticky-bottom {
     font-weight: 500;
   }
 
-  .interest-item {
+  .interest-item,
+  .skill-item {
     margin-bottom: 0.75rem;
 
     i {
@@ -700,7 +706,7 @@ blockquote {
     font-weight: 600;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    line-height: 1.5;
+    line-height: 1; // same height as the venue badge
   }
 
   // Fixed 3:2 landscape box; the figure fills it (cropped), click shows the full figure
@@ -857,4 +863,84 @@ body .al-lightbox-nav {
 .cv ul.list-group {
   list-style: none;
   padding-left: 0;
+}
+
+
+// Papers with extra figures (bib `preview_more`): "+N" badge on the thumbnail
+.publications .preview-col.has-more > a:first-of-type {
+  position: relative;
+}
+
+.publications .preview-col .preview-count {
+  position: absolute;
+  right: 0.4rem;
+  bottom: 0.4rem;
+  background: $ink;
+  color: #fff;
+  border-radius: 999px;
+  padding: 0.2rem 0.5rem;
+  font-family: $font-stack;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+
+// Lightbox thumbnail strip (assets/js/pub-lightbox-strip.js)
+body .pub-lightbox-strip {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  max-width: 100%;
+  overflow-x: auto;
+  margin-top: 0.75rem;
+  padding: 2px;
+
+  &[hidden] {
+    display: none;
+  }
+
+  button {
+    flex: none;
+    width: 84px;
+    aspect-ratio: 3 / 2;
+    padding: 0;
+    border: 1px solid $rule;
+    background: #fff;
+    opacity: 0.5;
+    cursor: pointer;
+
+    &:hover,
+    &[aria-current="true"] {
+      opacity: 1;
+    }
+
+    &[aria-current="true"] {
+      border-color: $ink;
+    }
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+// Extra figures stay lightbox-only; `.preview-col a { display: block }` would otherwise show them
+.publications ol.bibliography li .preview-col a[hidden] {
+  display: none;
+}
+
+// al_folio_cv indents titles in experience/education/awards/publications (ml-1 ml-md-4)
+// but not in projects. Tailwind sets that margin with !important inside a cascade layer,
+// which unlayered CSS cannot override, so shift the elements back by the same amount.
+.cv .ml-1.ml-md-4 {
+  position: relative;
+  left: -0.25rem;
+
+  @media (min-width: 768px) {
+    left: -1.5rem;
+  }
 }

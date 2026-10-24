@@ -363,30 +363,6 @@
   <!-- Thumbnail: original aspect ratio; click opens the full image in the lightbox.
        Uses the WebP variants jekyll-imagemagick builds (480w for the thumbnail, 800w for the lightbox). -->
   {% if site.enable_publication_thumbnails and entry.preview %}
-    {% assign preview_alt = entry.title | strip_html | escape %}
-    {% if entry.preview contains '://' %}
-      <div class="preview-col">
-        <a href="{{ entry.preview }}" data-lightbox="publications" data-title="{{ preview_alt }}">
-          <img class="preview" src="{{ entry.preview }}" alt="{{ preview_alt }}" loading="lazy">
-        </a>
-      </div>
-    {% else %}
-      {% assign preview_path = entry.preview | prepend: '/assets/img/publication_preview/' %}
-      {% assign preview_ext = preview_path | split: '.' | last %}
-      {% assign preview_base = preview_path | remove: '.png' | remove: '.jpg' | remove: '.jpeg' | remove: '.gif' %}
-      {% assign raster_exts = 'png,jpg,jpeg,gif' | split: ',' %}
-      {% if site.imagemagick.enabled and raster_exts contains preview_ext %}
-        {% assign preview_full = preview_base | append: '-800.webp' | relative_url %}
-        {% assign preview_thumb = preview_base | append: '-480.webp' | relative_url %}
-      {% else %}
-        {% assign preview_full = preview_path | relative_url %}
-        {% assign preview_thumb = preview_full %}
-      {% endif %}
-      <div class="preview-col">
-        <a href="{{ preview_full }}" data-lightbox="publications" data-title="{{ preview_alt }}">
-          <img class="preview" src="{{ preview_thumb }}" alt="{{ preview_alt }}" loading="lazy">
-        </a>
-      </div>
-    {% endif %}
+    {% include pub_preview.liquid preview=entry.preview more=entry.preview_more title=entry.title %}
   {% endif %}
 </div>

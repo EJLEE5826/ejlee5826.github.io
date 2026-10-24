@@ -32,6 +32,9 @@
           </div>
           <div class="periodical"><em>{{ p.venue }}</em>, {{ p.date | slice: 0, 4 }}</div>
         </div>
+        {%- if site.enable_publication_thumbnails and p.preview -%}
+          {% include pub_preview.liquid preview=p.preview title=p.title %}
+        {%- endif -%}
       </div>
     </li>
   {%- endfor -%}

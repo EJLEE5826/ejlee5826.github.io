@@ -66,6 +66,12 @@ sections:
         date: "2021"
         highlights:
           - Took part in labeling an optical satellite imagery dataset for AI training
+      - position: SKT AI Fellowship (2nd cohort)
+        company: SK Telecom
+        start_date: "2020.05"
+        end_date: "2020.12"
+        highlights:
+          - Implemented a best-shot inference model for high-resolution photos and videos, and extracted best shots from videos and burst photos
 
   - title: Selected Research
     type: projects
@@ -114,8 +120,9 @@ sections:
         end_date: "2022.02"
         highlights:
           - "Thesis: *Self-Channel Attention and Weighted Margin Ranking Loss for Best Frame Selection*"
-      - studyType: B.S.
+      - studyType: B.S. in Digital Imaging
         institution: Chung-Ang University
+        area: School of Integrative Engineering
         start_date: "2015.03"
         end_date: "2020.02"
 
@@ -164,17 +171,25 @@ sections:
         date: "2020"
         summary: Efficient image retargeting with self-attention
 
+  - title: Patents
+    type: awards
+    entries:
+      - title: Apparatus and method for evaluating the emotional preference of portrait photographs from an expert perspective
+        awarder: Korean Patent Application No. 10-2019-0016306
+        date: "2019"
+
   - title: Skills
     type: skills
     entries:
       - name: Programming
-        keywords: [Python]
+        icon: fa-solid fa-terminal
+        keywords: [Python, C++]
       - name: Frameworks & Tools
+        icon: fa-solid fa-screwdriver-wrench
         keywords: [PyTorch, Git/GitHub, Docker]
       - name: Vision Models
+        icon: fa-solid fa-cube
         keywords: [CLIP, Vision Transformer, Swin Transformer, ResNet, OV-Seg]
-      - name: Research & Evaluation
-        keywords: [mIoU, mACC, F1, Ablation study, Benchmark design, Failure analysis]
 
   - title: Open Source
     type: projects

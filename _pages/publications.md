@@ -44,3 +44,4 @@ images:
     show(location.hash === "#domestic" ? "domestic" : "international", false);
   })();
 </script>
+<script defer src="{{ '/assets/js/pub-lightbox-strip.js' | relative_url }}"></script>
