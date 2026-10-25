@@ -950,3 +950,50 @@ body .pub-lightbox-strip {
 .selected-papers ol.bibliography:not(:last-of-type) li:last-child {
   border-bottom: 1px solid $rule;
 }
+
+// Projects page (_includes/projects_list.liquid): extra lines inside the Publications entry markup
+.projects {
+  .project-role,
+  .project-summary {
+    font-size: 0.9rem;
+    color: $ink;
+    margin-top: 0.5rem;
+
+    strong {
+      font-weight: 500;
+    }
+  }
+
+  .project-keywords {
+    font-size: 0.8rem;
+    color: $muted;
+    margin-top: 0.35rem;
+  }
+
+  .project-points {
+    margin: 0.6rem 0 0;
+    padding-left: 1.1rem;
+    font-size: 0.9rem;
+    color: $ink;
+
+    li {
+      margin: 0 0 0.3rem;
+    }
+
+    strong {
+      font-weight: 500;
+    }
+  }
+}
+
+// Bullets inside a project entry are not entries: drop the `.publications ol.bibliography li` divider
+.publications.projects ol.bibliography .project-points li {
+  padding: 0;
+  border: 0;
+}
+
+// Korean tabs (CV, Projects): wrap at word boundaries instead of mid-word
+.pub-panel[lang="ko"] {
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}

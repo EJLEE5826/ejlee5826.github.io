@@ -13,6 +13,7 @@ Personal academic website of Eunju Lee, built with [al-folio](https://github.com
 | Co-author links       | `_data/coauthors.yml`                  |
 | CV (English / 한국어 tabs) | `_data/cv_en.yml`, `_data/cv_ko.yml` (rendered by `_includes/cv_body.liquid`) |
 | Korean papers (Publications bottom, ≤3rd author shown) | `_data/domestic_publications.yml` |
+| Projects page         | `_data/projects_en.yml`, `_data/projects_ko.yml` (tabs, rendered by `_includes/projects_list.liquid`) |
 | News (current year)   | `_news/*.md`                           |
 | Social icons          | `_data/socials.yml`                    |
 | Portrait              | `assets/img/prof_pic.jpg`              |

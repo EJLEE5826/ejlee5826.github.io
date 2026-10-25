@@ -1,0 +1,85 @@
+# Projects page (/projects/), rendered by _includes/projects_list.liquid with the
+# Publications markup, so badges, thumbnails, "+N" and the lightbox strip come for free.
+# Fields: id (anchor), badges[] (outlined), presentation (filled, e.g. Oral), title, meta, role, keywords[], points[] (markdown),
+#         links[] {label, url}, preview / preview_more (files in assets/img/publication_preview/).
+# Ongoing work goes under `ongoing` and is shown in a short section at the end.
+
+labels:
+  role: Role
+  ongoing: Ongoing
+
+projects:
+  - id: ncsoft
+    badges: [NCSOFT]
+    title: Open-Vocabulary Semantic Segmentation & Attribute Recognition
+    meta: NCSOFT Vision AI Understanding Team · AI Research Intern · 2022.09–2023.02
+    keywords: [Open-vocabulary segmentation, Attribute recognition, Vision-language models, Visual prompting]
+    points:
+      - Built an open-vocabulary dataset from Fashionpedia for a setting where general and fashion images are mixed, and studied vision-language segmentation and attribute recognition models.
+      - Traced why some attribute classes had low IoU despite reasonable pixel accuracy, and proposed a **non-binary mask visual prompt** that uses both object and background information.
+      - Improved mIoU and mACC over OV-Seg **without any additional trainable parameters**.
+
+  - id: hycal
+    badges: [CVPR]
+    title: "HyCal: Few-Shot Continual Learning across Heterogeneous Domains"
+    meta: IIPL · 2025.04–2026.01 · CVPR 2026 · Co-first author
+    role: Problem definition, experimental setup and benchmark design, implementation, validation and analysis, and writing.
+    keywords: [Few-shot class-incremental learning, Domain shift, Data imbalance]
+    points:
+      - Designed the **XD-VSCIL benchmark** spanning 8 heterogeneous domains to evaluate settings where domain gaps and data imbalance occur together.
+      - Implemented a **training-free prototype calibration** that combines cosine similarity and Mahalanobis distance to correct class representations without additional training.
+      - Compared methods across shot and imbalance settings; under high domain imbalance, average accuracy improved by **more than 4.5%p** over prior methods.
+    links:
+      - {label: Paper, url: "https://openaccess.thecvf.com/content/CVPR2026/html/Lee_HyCal_A_Training-Free_Prototype_Calibration_Method_for_Cross-Discipline_Few-Shot_Class-Incremental_CVPR_2026_paper.html"}
+      - {label: arXiv, url: "https://arxiv.org/abs/2604.15678"}
+      - {label: Code, url: "https://github.com/EJLEE5826/HyCal-CIL"}
+    preview: lee2026hycal-2.png
+    preview_more: lee2026hycal.png
+
+  - id: ri-prune
+    badges: [CIKM]
+    presentation: Oral
+    title: "RI-Prune: Visual Token Efficiency for Multi-Image Vision-Language Models"
+    meta: CIKM 2026 · Oral · Second author
+    keywords: [Visual token pruning, Multi-image understanding, Efficiency–performance trade-off]
+    points:
+      - Analyzed the limits of attention-based token selection with multiple input images, and studied a selection method that needs **neither additional training nor attention scores**.
+      - Scores tokens by **query relevance, cross-image correspondence, and intra-image representativeness**, and keeps a balanced share per image so each input's information is preserved.
+      - Evaluated the token-reduction vs. task-performance trade-off on several models and multi-image benchmarks, improving over existing pruning methods.
+    preview: lee2026riprune.png
+    preview_more: lee2026riprune-2.png
+
+  - id: background-shortcuts
+    badges: [WACV, NeurIPS-W]
+    title: Background Shortcuts in Visual Recognition
+    meta: "Learning to Detour (WACV 2024) · NegSep (NeurIPS 2026 VLM4RWD Workshop) · Second author on both"
+    keywords: [Shortcut learning, Weakly supervised segmentation, Zero-shot OOD detection]
+    points:
+      - "Common theme: how a model's reliance on object or background cues distorts its predictions, and task-specific ways to reduce it."
+      - "**Learning to Detour (weakly supervised segmentation):** an augmentation that separates and recombines object and background features to create diverse object–background pairs; analyzed background reliance and verified segmentation gains on PASCAL VOC and MS COCO."
+      - "**NegSep (zero-shot OOD detection):** separates the scores of background-related and unrelated negative labels, reducing the effect of background shortcuts on OOD decisions without additional training."
+    links:
+      - {label: Detour paper, url: "https://doi.org/10.1109/WACV57701.2024.00087"}
+      - {label: NegSep paper, url: "https://openreview.net/forum?id=6UnVrW6fYq"}
+    preview: kwon2024detour.png
+    preview_more: kim2026negsep.png, kim2026negsep-2.png
+
+  - id: construction
+    badges: [IEEE Access]
+    title: Weakly Supervised Object Detection for Construction Safety
+    meta: IIPL · 2022.07–2023.11 · IEEE Access 2024 · Co-first author
+    role: Problem definition, label definition, model design, experiments, and writing.
+    keywords: [Weakly supervised object detection, Small and thin objects, Safety monitoring]
+    points:
+      - Addressed detection of **small and thin objects such as ladders, outriggers, and hardhats** against cluttered backgrounds with limited annotation, and defined the fall-risk scene recognition task with domain experts.
+      - Curated and augmented **3,615 construction-site images**, improved the model structure, and built a safety-monitoring framework that combines CAM-based localization with spatial relations between objects to judge safe and unsafe states.
+    links:
+      - {label: Paper, url: "https://doi.org/10.1109/ACCESS.2024.3423697"}
+      - {label: Code, url: "https://github.com/EJLEE5826/SOS-CAM"}
+    preview: yang2024weakly.png
+
+ongoing:
+  - id: rs-scope
+    title: "RS-SCOPE: Cross-Dataset Continual Segmentation for Remote Sensing"
+    meta: Manuscript in preparation
+    summary: A cross-dataset benchmark and evaluation protocol for class-incremental semantic segmentation that separates the effects of changes in sensor, resolution, region, and annotation scheme across remote-sensing datasets.

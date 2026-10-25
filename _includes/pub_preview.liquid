@@ -4,8 +4,10 @@
   `more` (optional, comma-separated files) adds extra figures: the list shows only the
   first one with a "+N" badge, the lightbox steps through all of them and
   assets/js/pub-lightbox-strip.js shows them as a thumbnail strip.
-  Shared by _layouts/bib.liquid and _includes/domestic_publications.liquid.
+  `group` (optional) is the lightbox group, so tabs with the same figures do not share one.
+  Shared by _layouts/bib.liquid, _includes/domestic_publications.liquid and _includes/projects_list.liquid.
 {%- endcomment -%}
+{%- assign lightbox_group = include.group | default: 'publications' -%}
 {%- assign preview_alt = include.title | strip_html | escape -%}
 {%- assign raster_exts = 'png,jpg,jpeg,gif' | split: ',' -%}
 {%- assign files = include.preview | append: ',' | append: include.more | split: ',' -%}
@@ -31,12 +33,12 @@
       {%- endif -%}
     {%- endif -%}
     {%- if forloop.first %}
-      <a href="{{ preview_full }}" data-lightbox="publications" data-title="{{ preview_alt }}" data-thumb="{{ preview_thumb }}">
+      <a href="{{ preview_full }}" data-lightbox="{{ lightbox_group }}" data-title="{{ preview_alt }}" data-thumb="{{ preview_thumb }}">
         <img class="preview" src="{{ preview_thumb }}" alt="{{ preview_alt }}" loading="lazy">
         {%- if n_files > 1 %}<span class="preview-count" aria-label="{{ n_files }} figures">+{{ n_files | minus: 1 }}</span>{% endif %}
       </a>
     {%- else %}
-      <a href="{{ preview_full }}" data-lightbox="publications" data-title="{{ preview_alt }}" data-thumb="{{ preview_thumb }}" hidden></a>
+      <a href="{{ preview_full }}" data-lightbox="{{ lightbox_group }}" data-title="{{ preview_alt }}" data-thumb="{{ preview_thumb }}" hidden></a>
     {%- endif -%}
   {%- endfor %}
 </div>

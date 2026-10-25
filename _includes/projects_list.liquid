@@ -1,0 +1,60 @@
+{%- comment -%}
+  Projects page body from _data/projects.yml. Reuses the Publications markup
+  (.publications ol.bibliography li > .row > .pub-body) so the venue badges, links,
+  3:2 thumbnails, "+N" badge and lightbox strip look and behave the same.
+  Params: data (site.data.projects_en / projects_ko), prefix (anchor id prefix, e.g. "ko-").
+{%- endcomment -%}
+{%- assign d = include.data -%}
+{%- assign group = 'projects-' | append: include.prefix | append: 'list' -%}
+<div class="publications projects">
+  <ol class="bibliography">
+    {%- for p in d.projects %}
+      <li>
+        <div class="row">
+          <div id="{{ include.prefix }}{{ p.id }}" class="pub-body">
+            <div class="abbr">
+              {%- for b in p.badges -%}<abbr class="badge">{{ b }}</abbr>{%- endfor -%}
+              {%- if p.presentation -%}<span class="badge badge-presentation">{{ p.presentation }}</span>{%- endif -%}
+            </div>
+            <div class="title">{{ p.title }}</div>
+            <div class="periodical">{{ p.meta }}</div>
+            {%- if p.role %}<div class="project-role"><strong>{{ d.labels.role }}:</strong> {{ p.role }}</div>{% endif %}
+            {%- if p.keywords %}<div class="project-keywords">{{ p.keywords | join: ' · ' }}</div>{% endif %}
+            <ul class="project-points">
+              {%- for pt in p.points %}
+                <li>{{ pt | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>
+              {%- endfor %}
+            </ul>
+            {%- if p.links %}
+              <div class="links">
+                {%- for l in p.links %}
+                  <a href="{{ l.url }}" class="btn btn-sm z-depth-0" role="button">{{ l.label }}</a>
+                {%- endfor %}
+              </div>
+            {%- endif %}
+          </div>
+          {%- if site.enable_publication_thumbnails and p.preview -%}
+            {% include pub_preview.liquid preview=p.preview more=p.preview_more title=p.title group=group %}
+          {%- endif -%}
+        </div>
+      </li>
+    {%- endfor %}
+  </ol>
+
+  {%- if d.ongoing %}
+    <h2 class="bibliography">{{ d.labels.ongoing }}</h2>
+    <ol class="bibliography">
+      {%- for p in d.ongoing %}
+        <li>
+          <div class="row">
+            <div id="{{ include.prefix }}{{ p.id }}" class="pub-body">
+              <div class="title">{{ p.title }}</div>
+              <div class="periodical">{{ p.meta }}</div>
+              <div class="project-summary">{{ p.summary }}</div>
+            </div>
+          </div>
+        </li>
+      {%- endfor %}
+    </ol>
+  {%- endif %}
+</div>

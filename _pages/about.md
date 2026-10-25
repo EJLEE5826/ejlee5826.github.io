@@ -30,7 +30,7 @@ images:
 
 I am a Ph.D. student in Image Engineering at Chung-Ang University, advised by Prof. YoungBin Kim in the Intelligent Information Processing Lab (IIPL). I received my M.S. in Image Engineering from the same lab in 2022 and my B.S. from Chung-Ang University in 2020.
 
-My research is on making vision and vision-language models learn reliably when data is scarce, imbalanced, or shifting. I am particularly interested in **few-shot class-incremental and continual learning**, **vision-language models**, and **multimodal learning**, including how modalities should be balanced and how models can unlearn without breaking what they already know. Earlier work covered weakly supervised semantic segmentation and medical image analysis.
+My research is on making vision and vision-language models learn reliably when data is scarce, imbalanced, or shifting. I focus on two areas: **robust learning**, covering few-shot class-incremental and continual learning and adaptation to new domains, and **vision-language models**, covering multimodal learning and how modalities should be balanced. Earlier work covered weakly supervised semantic segmentation and medical image analysis.
 
 Recent work includes HyCal (CVPR 2026, co-first author), a training-free prototype calibration method for cross-discipline few-shot class-incremental learning, and XTag-CLIP (AMAI @ MICCAI 2025), a cross-attention approach to thyroid scar analysis with limited data.
 

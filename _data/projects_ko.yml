@@ -1,0 +1,83 @@
+# 국문 Projects 탭 (/projects/, the default tab). Same fields as projects_en.yml; ids are prefixed
+# with "ko-" in the page so anchors stay unique across the two tabs.
+
+labels:
+  role: 담당
+  ongoing: 진행 중
+
+projects:
+  - id: ncsoft
+    badges: [NCSOFT]
+    title: Open-Vocabulary Semantic Segmentation & Attribute Recognition
+    meta: NCSOFT Vision AI Understanding Team · AI Research Intern · 2022.09–2023.02
+    keywords: [Open-Vocabulary Segmentation, Attribute Recognition, Vision-Language Model, Visual Prompting]
+    points:
+      - 일반 이미지와 패션 이미지가 혼재하는 환경에 대응하기 위해 Fashionpedia 기반 Open-Vocabulary 데이터 구성을 수행하고, Vision-Language 기반 Segmentation·Attribute Recognition 모델 연구
+      - 일부 Attribute Class에서 Pixel Accuracy 대비 IoU가 낮은 현상을 분석하고, 객체와 배경 정보를 활용하는 **Non-binary Mask 기반 Visual Prompt 방법** 제안
+      - "**추가 학습 파라미터 없이** OV-Seg 대비 mIoU·mACC 성능 향상 확인"
+
+  - id: hycal
+    badges: [CVPR]
+    title: "HyCal: 이종 도메인·데이터 불균형 환경의 Few-Shot Continual Learning"
+    meta: IIPL · 2025.04–2026.01 · CVPR 2026 · 공동 제1저자
+    role: 문제 정의, 실험 설정 설계, 모델 구현, 벤치마크 구성, 성능 검증·분석 및 논문 작성
+    keywords: [Few-Shot Class-Incremental Learning, Domain Shift, Data Imbalance]
+    points:
+      - 도메인 간 분포 차이와 데이터 불균형이 함께 존재하는 환경을 평가하기 위해 **8개 이종 도메인 기반 XD-VSCIL 벤치마크** 설계
+      - Cosine Similarity와 Mahalanobis Distance를 결합하여 **추가 학습 없이 Prototype을 보정하는 Training-Free Calibration 방법** 구현
+      - 다양한 불균형 조건과 5/10/15/20-shot 설정에서 비교 실험을 수행하고, **높은 도메인 불균형 조건에서 기존 방법 대비 평균 정확도 4.5%p 이상 개선** 확인
+    links:
+      - {label: Paper, url: "https://openaccess.thecvf.com/content/CVPR2026/html/Lee_HyCal_A_Training-Free_Prototype_Calibration_Method_for_Cross-Discipline_Few-Shot_Class-Incremental_CVPR_2026_paper.html"}
+      - {label: arXiv, url: "https://arxiv.org/abs/2604.15678"}
+      - {label: Code, url: "https://github.com/EJLEE5826/HyCal-CIL"}
+    preview: lee2026hycal-2.png
+    preview_more: lee2026hycal.png
+
+  - id: ri-prune
+    badges: [CIKM]
+    presentation: Oral
+    title: "RI-Prune: 다중 이미지 Vision-Language Model의 시각 토큰 효율화"
+    meta: CIKM 2026 · Oral · 제2저자
+    keywords: [Visual Token Pruning, Multi-Image Understanding, 효율–성능 Trade-off]
+    points:
+      - 다중 이미지 입력에서 Attention 기반 토큰 선별의 한계를 분석하고, **추가 학습과 Attention Score 없이** 동작하는 선별 방법 연구
+      - "**질문 관련성, 이미지 간 대응, 이미지 내부 대표성**을 기준으로 토큰을 평가하고, 이미지별 균형 선별로 각 입력의 정보 보존"
+      - 여러 모델과 다중 이미지 벤치마크에서 토큰 감소량과 성능 간 Trade-off를 평가하여 기존 Pruning 방법 대비 개선 확인
+    preview: lee2026riprune.png
+    preview_more: lee2026riprune-2.png
+
+  - id: background-shortcuts
+    badges: [WACV, NeurIPS-W]
+    title: 배경 Shortcut 분석 및 완화를 통한 시각인지 강건성
+    meta: "Learning to Detour (WACV 2024) · NegSep (NeurIPS 2026 VLM4RWD Workshop) · 두 논문 모두 제2저자"
+    keywords: [Shortcut Learning, Weakly Supervised Segmentation, Zero-Shot OOD Detection]
+    points:
+      - "공통 주제: 객체 또는 배경 단서에 대한 의존으로 예측이 왜곡되는 문제와 과제별 완화 방법"
+      - "**Learning to Detour (약지도 의미 분할):** 객체와 배경 특징을 분리·재조합하여 다양한 객체–배경 조합을 생성하는 Augmentation을 제안하고, 배경 의존성 분석 및 PASCAL VOC·MS COCO에서 분할 성능 향상 확인"
+      - "**NegSep (Zero-Shot OOD 탐지):** 배경 관련·비관련 Negative Label의 점수를 분리하여, 추가 학습 없이 배경 Shortcut이 OOD 판정에 미치는 영향 완화"
+    links:
+      - {label: Detour paper, url: "https://doi.org/10.1109/WACV57701.2024.00087"}
+      - {label: NegSep paper, url: "https://openreview.net/forum?id=6UnVrW6fYq"}
+    preview: kwon2024detour.png
+    preview_more: kim2026negsep.png, kim2026negsep-2.png
+
+  - id: construction
+    badges: [IEEE Access]
+    title: 건설현장 안전 모니터링을 위한 약지도 객체 탐지
+    meta: IIPL · 2022.07–2023.11 · IEEE Access 2024 · 공동 제1저자
+    role: 문제 정의, 데이터 라벨 정의, 모델 구조 개선, 실험 설계·성능 검증 및 논문 작성
+    keywords: [Weakly Supervised Object Detection, 소형·선형 객체, Safety Monitoring]
+    points:
+      - 복잡한 배경, 높은 Annotation 비용, 안전·위험 데이터 불균형과 **사다리·아웃리거·안전모 등 소형·선형 객체의 검출 어려움**을 다루는 문제 정의
+      - 도메인 전문가와 협업하여 추락 위험 장면 인식 과제를 구체화하고, **3,615장 규모의 건설현장 데이터를 정제·증강**하며 해당 객체 특성에 맞는 모델 구조 설계
+      - CAM 기반 객체 위치 추정과 객체 간 공간 관계를 활용하여 **객체 인식 결과를 안전·위험 상태 판단으로 연결하는 프레임워크** 연구
+    links:
+      - {label: Paper, url: "https://doi.org/10.1109/ACCESS.2024.3423697"}
+      - {label: Code, url: "https://github.com/EJLEE5826/SOS-CAM"}
+    preview: yang2024weakly.png
+
+ongoing:
+  - id: rs-scope
+    title: "RS-SCOPE: 원격탐사 Cross-Dataset Continual Segmentation"
+    meta: 논문 준비 중
+    summary: 원격탐사 데이터셋 간 센서·해상도·지역·Annotation 체계 변화가 Class-Incremental Semantic Segmentation에 미치는 영향을 분리해 평가하는 Cross-Dataset 벤치마크 및 평가 프로토콜

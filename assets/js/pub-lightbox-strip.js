@@ -17,7 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const links = Array.from(document.querySelectorAll(".preview-col a[data-lightbox]"));
 
     const render = () => {
-      const current = links.find((a) => a.href === image.src);
+      // Tabs can repeat a figure; take the copy in the visible panel.
+      const current = links.find((a) => a.href === image.src && !a.closest("[hidden]:not(a)"));
       const siblings = current ? Array.from(current.closest(".preview-col").querySelectorAll("a[data-lightbox]")) : [];
       strip.replaceChildren();
       strip.hidden = siblings.length < 2;

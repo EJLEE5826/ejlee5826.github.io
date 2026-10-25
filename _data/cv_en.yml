@@ -1,4 +1,4 @@
-# English CV, rendered on /cv/ (English tab) by _includes/cv_body.liquid.
+# English CV, rendered on /cv/#en (English tab) by _includes/cv_body.liquid.
 # Each section is {title, type, entries}; `type` picks the al_folio_cv template
 # (experience, education, publications, awards, skills, interests, projects).
 # Dates are "YYYY.MM" or "YYYY"; an entry without end_date shows "Present".
@@ -17,10 +17,10 @@ label: Ph.D. Student · Computer Vision & Multimodal AI
 email: dmswn5829@cau.ac.kr
 website: https://ejlee5826.github.io/
 summary: >-
-  I work on computer vision and multimodal AI, including visual recognition, semantic segmentation,
-  domain generalization, and few-shot and continual learning. Through an industry research internship and
-  academic and industry-collaborative research, I have designed and implemented visual recognition
-  algorithms, built datasets and benchmarks, and validated performance quantitatively.
+  I study computer vision and vision-language learning, focusing on object recognition and segmentation
+  and on performance degradation under domain shift. In an industry internship and research projects,
+  I have built datasets, implemented and improved models, designed benchmarks and evaluation protocols,
+  and analyzed performance across conditions.
 
 sections:
   - title: Core Expertise
@@ -43,11 +43,10 @@ sections:
         company: NCSOFT · Vision AI Understanding Team
         start_date: "2022.09"
         end_date: "2023.02"
-        summary: Open-vocabulary fashion attribute segmentation and recognition
+        summary: Open-Vocabulary Semantic Segmentation & Attribute Recognition
         highlights:
-          - Built a Fashionpedia-based vocabulary set and studied open-vocabulary segmentation and attribute recognition models
-          - Ran experiments with OV-Seg, CLIP, and Swin-based models and improved performance through prompt design and background masking
-          - Implemented models, analyzed results, and documented and handed over the research code and environments
+          - Built an open-vocabulary dataset from Fashionpedia and studied vision-language segmentation and attribute recognition models
+          - Proposed a non-binary mask visual prompt that improved mIoU and mACC over OV-Seg without additional trainable parameters ([details](/projects/#ncsoft))
 
   - title: Research Experience
     type: experience
@@ -61,6 +60,13 @@ sections:
           - Semantic segmentation, cross-domain generalization, and few-shot and continual learning
           - Model design and implementation, benchmark construction, ablation studies, and performance validation
           - International publications and industry-collaborative R&D projects
+      - position: AI Inference Engine Development
+        company: Industry–academia R&D project funded by the Ministry of Culture, Sports and Tourism (MCST)
+        start_date: "2020.07"
+        end_date: "2023.12"
+        highlights:
+          - Developed models that predict emotion, concentration, and working memory from images, video, and speech
+          - Implemented a shared inference interface integrated with the service platform
       - position: Optical Satellite Imagery Dataset Construction
         company: Research project related to the Korea Aerospace Research Institute (KARI)
         date: "2021"
@@ -76,29 +82,32 @@ sections:
   - title: Selected Research
     type: projects
     entries:
-      - name: "HyCal: Cross-Discipline Few-Shot Class-Incremental Learning"
-        url: https://arxiv.org/abs/2604.15678
+      - name: "HyCal: Few-Shot Continual Learning across Heterogeneous Domains"
+        url: /projects/#hycal
         date: "2026"
         summary: CVPR 2026 · Co-first author
         highlights:
-          - "**Problem:** prototype drift and degraded recognition across heterogeneous domains and imbalanced data"
-          - "**Approach:** designed the XD-VSCIL benchmark spanning 8 heterogeneous domains and proposed a training-free prototype calibration that combines cosine similarity and Mahalanobis distance"
-          - "**Validation:** evaluated under varying shot and imbalance settings, with per-domain, incremental-session, and calibration analyses"
-      - name: Weakly Supervised Object Detection for Construction Sites
-        url: https://doi.org/10.1109/ACCESS.2024.3423697
+          - Designed the 8-domain XD-VSCIL benchmark and a training-free prototype calibration combining cosine similarity and Mahalanobis distance; more than 4.5%p average accuracy gain under high domain imbalance
+      - name: "RI-Prune: Visual Token Efficiency for Multi-Image VLMs"
+        url: /projects/#ri-prune
+        date: "2026"
+        summary: CIKM 2026 · Oral
+        highlights:
+          - Visual token selection without additional training or attention scores, based on query relevance, cross-image correspondence, and intra-image representativeness
+      - name: Background Shortcuts in Visual Recognition
+        url: /projects/#background-shortcuts
+        date: "2024–2026"
+        summary: Learning to Detour (WACV 2024) · NegSep (NeurIPS 2026 Workshop)
+        highlights:
+          - Analyzed and reduced reliance on background cues, through object–background recombination for weakly supervised segmentation and through separated negative-label scores for zero-shot OOD detection
+      - name: Weakly Supervised Object Detection for Construction Safety
+        url: /projects/#construction
         date: "2024"
         summary: IEEE Access 2024 · Co-first author
         highlights:
-          - "**Problem:** locating objects on construction sites accurately when only limited annotation is available"
-          - "**Approach:** a weakly supervised framework built on an enhanced class activation map (CAM)"
-          - "**Validation:** quantitative comparison against baselines on real construction-site images"
-      - name: "XTag-CLIP: Thyroid Scar Analysis with Limited Data"
-        url: https://doi.org/10.1007/978-3-032-09569-5_15
-        date: "2025"
-        summary: AMAI @ MICCAI 2025 · First author
-        highlights:
-          - Fine-grained visual attribute recognition for medical images with limited data, using CLIP and cross-attention
-      - name: Cross-Dataset Continual Segmentation for Remote Sensing
+          - Detection of small and thin objects (ladders, outriggers, hardhats) on 3,615 curated construction-site images, with CAM localization and spatial relations to judge safe and unsafe states
+      - name: "RS-SCOPE: Cross-Dataset Continual Segmentation for Remote Sensing"
+        url: /projects/#rs-scope
         date: "2026"
         summary: Ongoing research
         highlights:
@@ -181,15 +190,15 @@ sections:
   - title: Skills
     type: skills
     entries:
-      - name: Programming
+      - name: Development
         icon: fa-solid fa-terminal
-        keywords: [Python, C++]
-      - name: Frameworks & Tools
+        keywords: [Python, C++, PyTorch, OpenCV]
+      - name: Tools
         icon: fa-solid fa-screwdriver-wrench
-        keywords: [PyTorch, Git/GitHub, Docker]
-      - name: Vision Models
-        icon: fa-solid fa-cube
-        keywords: [CLIP, Vision Transformer, Swin Transformer, ResNet, OV-Seg]
+        keywords: [Git, Docker]
+      - name: Experimental Practice
+        icon: fa-solid fa-flask
+        keywords: [Dataset construction, Label taxonomy definition, Model comparison experiments, Per-condition evaluation, Error analysis]
 
   - title: Open Source
     type: projects
