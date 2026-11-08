@@ -52,7 +52,7 @@ projects:
   - id: background-shortcuts
     badges: [WACV, NeurIPS-W]
     title: Background Shortcuts in Visual Recognition
-    meta: "Learning to Detour (WACV 2024) · NegSep (NeurIPS 2026 VLM4RWD Workshop) · Second author on both"
+    meta: "Learning to Detour (WACV 2024) · NegSep (NeurIPS 2026 VLM4RWD Workshop) · Second author"
     keywords: [Shortcut learning, Weakly supervised segmentation, Zero-shot OOD detection]
     points:
       - "Common theme: how a model's reliance on object or background cues distorts its predictions, and task-specific ways to reduce it."

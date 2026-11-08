@@ -49,7 +49,7 @@ projects:
   - id: background-shortcuts
     badges: [WACV, NeurIPS-W]
     title: 배경 Shortcut 분석 및 완화를 통한 시각인지 강건성
-    meta: "Learning to Detour (WACV 2024) · NegSep (NeurIPS 2026 VLM4RWD Workshop) · 두 논문 모두 제2저자"
+    meta: "Learning to Detour (WACV 2024) · NegSep (NeurIPS 2026 VLM4RWD Workshop) · 제2저자"
     keywords: [Shortcut Learning, Weakly Supervised Segmentation, Zero-Shot OOD Detection]
     points:
       - "공통 주제: 객체 또는 배경 단서에 대한 의존으로 예측이 왜곡되는 문제와 과제별 완화 방법"
